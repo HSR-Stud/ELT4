@@ -1,0 +1,179 @@
+\section{Schwingkreise}
+\subsection{Freie Schwingung}
+Die Werte $\textcolor{blue}{U_1,U_2,\beta_u}\text{ sowie
+}\textcolor{red}{I_1,I_2,\beta_i}$ müssen aus den Anfangswerten bestimmt
+werden.\\
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{| p{4cm} | p{7cm} | p{7cm} |}
+	\hline
+		& \textbf{Parallelschwingkreis} 
+		& \textbf{Serienschwingkreis} \\
+	\hline
+%		& \parbox{7cm}{\includegraphics[height=2cm]{../El4/bilder/lcrpara.jpg}}
+%		& \parbox{7cm}{\includegraphics[height=2cm]{../El4/bilder/lcrseries.jpg}} \\
+%	\hline	
+	DGL &
+	\begin{minipage}{7cm}
+    	\vspace{0.1cm}
+    	$\ddot{u} + \dfrac{1}{RC} \dot{u} + \dfrac{1}{LC} u = 0
+    	\Leftrightarrow \ddot{u} + \dfrac{\omega_r}{Q_P} \dot{u} + \omega_r^2
+    	u = 0$
+    \end{minipage}& 
+	\begin{minipage}{7cm}
+    	\vspace{0.1cm}
+    	$\ddot{i} + \dfrac{R}{L} \dot{i} + \dfrac{1}{LC} i = 0
+    	\Leftrightarrow \ddot{i} + \dfrac{\omega_r}{Q_S} \dot{i} + \omega_r^2 i =
+    	0$\\
+    \end{minipage}\\
+	\hline
+	Resonanzfrequenz, Güte, Dämpfungsfaktor &
+		\begin{minipage}{7cm}
+        	\vspace{0.1cm}
+       		$\omega_r = \frac{1}{\sqrt{LC}}\qquad Q_P = R\sqrt{\frac{C}{L}} =
+       		\frac{R}{\omega_r L}=R\omega_rC =\frac{1}{2 \xi_P}$
+       		\end{minipage}&
+		\begin{minipage}{7cm}
+        	\vspace{0.1cm}
+	  		$\omega_r = \frac{1}{\sqrt{LC}}\qquad Q_S = \frac{1}{R}\sqrt{\frac{L}{C}}
+	  		= \frac{\omega_r L}{R}=\frac{1}{R\omega_rC} = \frac{1}{2 \xi_S}$
+	  		\end{minipage}\\
+
+	\hline	
+	\textcolor{darkgrey}{Standardstartbedingungen} &
+	\begin{minipage}{7cm}
+    	\vspace{0.1cm}
+    	\textcolor{darkgrey}{$u(t=0)=U_0$\quad
+    	$\dot{u}(t=0)=-\dfrac{U_o}{RC}$}\\
+    \end{minipage} &
+	\begin{minipage}{7cm}
+     	\vspace{0.1cm}
+    	\textcolor{darkgrey}{$i(t=0)=0$\quad
+    	$\dot{i}(t=0)=\dfrac{U_o}{L}$}\\   
+    \end{minipage}\\
+	\hline
+	Aperiodisch, $ Q < \frac{1}{2}$
+		& $u(t) = \textcolor{blue}{U_1} e^{\alpha_1 t} + \textcolor{blue}{U_2} e^{\alpha_2 t}$ 
+		& $i(t) = \textcolor{red}{I_1} e^{\alpha_1 t} + \textcolor{red}{I_2} e^{\alpha_2 t}$ \\
+		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_P} \pm \omega_r \sqrt{\frac{1}{4 Q_P^2} - 1}$	
+		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_S} \pm \omega_r \sqrt{\frac{1}{4Q_S^2} - 1}$\\
+		& \textcolor{darkgrey}{$U_1 = U_0 \frac{\frac{\omega_r}{Q} +
+		\alpha_2}{\alpha_2 - \alpha_1} \quad$ $U_2 = U_0 \frac{\frac{\omega_r}{Q} +
+		\alpha_1}{\alpha_1 - \alpha_2}$}
+		& \textcolor{darkgrey}{$I_1 = \frac{U_0}{(\alpha_1 - \alpha_2)L} \quad I_2
+		= -I_1$}
+		\vspace{0.1cm}
+		\\
+	\hline 	
+	Kritisch, $ Q = \frac{1}{2}$
+		& $u(t) = (\textcolor{blue}{U_1} + \textcolor{blue}{\beta_u} t) 
+		e^{\alpha t} = (\textcolor{blue}{U_1} + \textcolor{blue}{\beta_u} t) 
+		e^{- \omega_r t}$ 
+		& $u(t) = (\textcolor{red}{I_1} + \textcolor{red}{\beta_i} t) 
+		e^{\alpha t} = (\textcolor{red}{I_1} + \textcolor{red}{\beta_i} t) 
+		e^{- \omega_r t}$ \\
+% 		& $i(t) = \textcolor{red}{I_1} e^{- \omega_r t} +
+% 		\textcolor{red}{\beta_i} t e^{- \omega_r t}$ \\ 
+		& $\alpha_{1,2} = - \dfrac{\omega_r}{2 Q_P} = - \omega_r$ & 
+		$\alpha_{1,2} = - \dfrac{\omega_r}{2 Q_S} = - \omega_r$\\
+		& \textcolor{darkgrey}{$U_1 = U_0 \quad \beta = -U_0 \left(
+		\frac{\omega_r}{Q}+\alpha \right)$} & 
+		\textcolor{darkgrey}{$I_1 = 0 \quad \beta = \dfrac{U_0}{L}$}
+		\vspace{0.1cm}
+		\\
+	\hline 	
+	Periodisch, $ Q > \frac{1}{2}$
+		& $u(t) = \textcolor{blue}{U_1} e^{\alpha_1 t} + 
+					\textcolor{blue}{U_2} e^{\alpha_2 t} $
+		& $i(t) = \textcolor{red}{I_1} e^{\alpha_1 t} + 
+					\textcolor{red}{I_2} e^{\alpha_2 t} $ \\
+% 	 	& $i(t) = \textcolor{red}{I_1} e^{-\frac{\omega_r}{2 Q_S} t} \cos{\omega_0 t} + 
+% 					\textcolor{red}{I_2} e^{-\frac{\omega_r}{2 Q_S} t} \sin{\omega_0 t} $ \\
+		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_P} \pm j \omega_r \sqrt{1 - \frac{1}{4 Q_P^2}}$	
+		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_S} \pm j \omega_r \sqrt{1 - \frac{1}{4 Q_S^2}}$	\\
+		& $\omega_0 = \omega_r \sqrt{1 - \frac{1}{4 Q_P^2}} \qquad \omega_0 \approx \omega_r (Q_P > 10)$ 
+		& $\omega_0 = \omega_r \sqrt{1 - \frac{1}{4 Q_S^2}} \qquad \omega_0 \approx\omega_r (Q_S > 10)$\\
+		& \textcolor{darkgrey}{$u(t) = \frac{U_0 \omega_r}{\omega_0} e^{- \frac{\omega_r}{2
+					Q} t} \cos{[\omega_0 t + \arctan{\frac{1}{\sqrt{4 Q^2 -1}}}]}$}
+		& \textcolor{darkgrey}{$I_1 =  \frac{U_0}{L \cdot 2 \cdot j \omega_0} \quad I_2 = -I_1$
+		$ \quad i(t) = \frac{U_0}{\omega_0 L} e^{-\xi  \omega_r  t} \sin{(\omega_0 t)}$}
+		%%\vspace{0.1cm}
+		\\
+	\hline
+	\end{tabular}
+
+
+\subsection{Erzwungene Schwingung}	
+\begin{tabular}{| p{4cm} | p{14.4cm}|}
+	\hline
+	Maximalwerte &
+	\begin{minipage}{7cm}
+    	\vspace{0.1cm}
+   		$I_{Lmax}=I_{Cmax}=\dfrac{I\cdot
+   		Q_P}{\sqrt{1-\frac{1}{4Q_P}}}$ \vspace{0.1cm}\\ $\omega_{I_{Lmax}} =
+   		\omega_r\sqrt{1-\frac{1}{2Q_P^2}}\qquad \omega_{I_{Cmax}} = \dfrac{\omega_r}{\sqrt{1-\frac{1}{2Q_P^2}}}$\\
+   	\end{minipage}
+	\vline \hspace{0.1cm}
+	\begin{minipage}[b]{7cm}
+    	Gilt auch für $U_{Lmax}=U_{Cmax}$ bei dem Serieschwingkreis, jedoch muss
+    	$Q_P$ mit $Q_s$ ersetzt werden.
+    	\vspace{0.2cm}    	
+    \end{minipage}\\
+	\hline
+	Bandbreite, Verstimmung &
+	\begin{minipage}{7cm}
+		\includegraphics[width=6cm]{./bilder/Bandbreite.jpg}
+   	\end{minipage}
+	\vline \hspace{0.1cm}
+	\begin{minipage}[c]{7cm}
+  		$b_w = \omega_2 - \omega_1 = \dfrac{\omega_r}{Q}$\\
+  		$B = \dfrac{f_r}{Q}=\dfrac{b_w}{2\pi}$\\\\
+		$\eta = \dfrac{\omega}{\omega_r} - \dfrac{\omega_r}{\omega} \qquad
+		\dfrac{Z}{R} = \dfrac{U}{U_{max}} = \dfrac{1}{\sqrt{1 + (\eta Q)^2}}$
+\end{minipage}\\
+	\hline
+	Zeigerdiagramme &
+	\begin{minipage}{4.6cm}
+    	\vspace{0.1cm}
+		\includegraphics[width=4cm]{./bilder/Zeigerdiagramm_w1.jpg}\\ 
+    \end{minipage}
+	\vline \hspace{0.1cm}
+	\begin{minipage}{4.6cm}
+  		\includegraphics[width=4cm]{./bilder/Zeigerdiagramm_wr.jpg}
+    \end{minipage}
+	\vline \hspace{0.1cm}
+	\begin{minipage}{4.6cm}
+ 		\includegraphics[width=4cm]{./bilder/Zeigerdiagramm_w2.jpg}   
+    \end{minipage}\\
+	\hline
+\end{tabular}
+\renewcommand{\arraystretch}{1}
+
+\subsection{Verlustbehafteter Schwingkreis}
+Resonanzfrequenz $\omega_r$ tritt dort auf, wo 
+$\operatorname{Im} \{ \underline{Y}(\omega) \} =
+\operatorname{Im}\{\underline{Z}(\omega) \} = 0$.
+
+\subsection{Resonanzkreis mit realen Elementen}
+Umrechnungen Parallel- $\Longleftrightarrow$ Serieschaltungen von L \& R oder C \& R. \\
+
+% Siehe http://www.causa-dura.ch/Scripts/aet\_skript.pdf, seite 121 
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{| p{2cm} | p{8cm} | p{8cm} |}
+	\hline
+		& \textbf{Parallel $\Rightarrow$ Seriell}  
+		& \textbf{Seriell $\Rightarrow$ Parallel} \\
+	\hline
+		L \& R
+		& $ R_S = \dfrac{R_P (\omega L_P)^2}{R_P^2 + (\omega L_P)^2} \qquad 
+			L_S = \dfrac{R_P^2 L_P}{R_P^2 + (\omega L_P)^2}  $
+		& $ R_P = \dfrac{R_S^2 + (\omega L_S)^2}{R_S} \qquad 
+			L_P = \dfrac{R_S^2 + (\omega L_S)^2}{\omega^2 L_S}   $ \\
+	\hline	
+		C \& R
+		& $ R_S = \dfrac{R_P}{1 + (\omega R_P C_P)^2} \qquad 
+			C_S = \dfrac{1 + (\omega R_P C_P)^2}{(\omega R_P)^2 C_P}$
+		& $ R_P = \dfrac{(\omega C_S R_S)^2 + 1}{(\omega C_S)^2 R_S} \qquad
+			C_P = \dfrac{C_S}{1 + (\omega C_S R_S)^2}$\\
+	\hline
+\end{tabular}
+\renewcommand{\arraystretch}{1}
