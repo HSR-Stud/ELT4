@@ -3,42 +3,35 @@
 Die Werte $\textcolor{blue}{U_1,U_2,\beta_u}\text{ sowie
 }\textcolor{red}{I_1,I_2,\beta_i}$ müssen aus den Anfangswerten bestimmt
 werden.\\
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{2.5}
 \begin{tabular}{| p{4cm} | p{7cm} | p{7cm} |}
 	\hline
 		& \textbf{Parallelschwingkreis} 
 		& \textbf{Serienschwingkreis} \\
 	\hline
+	& \input{tikzPictures/ParallelSKbeschriftet}
+	& \input{tikzPictures/SerieSK}\\
+	\hline
 %		& \parbox{7cm}{\includegraphics[height=2cm]{../El4/bilder/lcrpara.jpg}}
 %		& \parbox{7cm}{\includegraphics[height=2cm]{../El4/bilder/lcrseries.jpg}} \\
 %	\hline	
 	DGL &
-	\begin{minipage}{7cm}
-    	\vspace{0.1cm}
-    	$\ddot{u} + \dfrac{1}{RC} \dot{u} + \dfrac{1}{LC} u = 0
-    	\Leftrightarrow \ddot{u} + \dfrac{\omega_r}{Q_P} \dot{u} + \omega_r^2
-    	u = 0$
-    \end{minipage}& 
-	\begin{minipage}{7cm}
-    	\vspace{0.1cm}
-    	$\ddot{i} + \dfrac{R}{L} \dot{i} + \dfrac{1}{LC} i = 0
-    	\Leftrightarrow \ddot{i} + \dfrac{\omega_r}{Q_S} \dot{i} + \omega_r^2 i =
-    	0$\\
-    \end{minipage}\\
+  $\ddot{u} + \dfrac{1}{RC} \dot{u} + \dfrac{1}{LC} u = 0$
+  & $\ddot{i} + \dfrac{R}{L} \dot{i} + \dfrac{1}{LC} i = 0$\\
+  & $\ddot{u} + \dfrac{\omega_r}{Q_P} \dot{u} + \omega_r^2 u = 0$
+  & $\ddot{i} + \dfrac{\omega_r}{Q_S} \dot{i} + \omega_r^2 i = 0$\\
 	\hline
-	Resonanzfrequenz, Güte, Dämpfungsfaktor &
-		\begin{minipage}{7cm}
-        	\vspace{0.1cm}
-       		$\omega_r = \frac{1}{\sqrt{LC}}\qquad Q_P = R\sqrt{\frac{C}{L}} =
-       		\frac{R}{\omega_r L}=R\omega_rC =\frac{1}{2 \xi_P}$
-       		\end{minipage}&
-		\begin{minipage}{7cm}
-        	\vspace{0.1cm}
-	  		$\omega_r = \frac{1}{\sqrt{LC}}\qquad Q_S = \frac{1}{R}\sqrt{\frac{L}{C}}
-	  		= \frac{\omega_r L}{R}=\frac{1}{R\omega_rC} = \frac{1}{2 \xi_S}$
-	  		\end{minipage}\\
-
-	\hline	
+	Resonanzfrequenz & \multicolumn{2}{|c|}{$\omega_r =
+	\frac{1}{\sqrt{LC}}$} \\
+	\hline
+	Güte & 
+	$Q_P = R\sqrt{\frac{C}{L}} = \frac{R}{\omega_r L}=R\omega_rC$ &
+	$Q_S = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{\omega_r
+	L}{R}=\frac{1}{R\omega_rC}$\\
+	\hline
+	Dämpfungsfaktor & \multicolumn{2}{|c|}{$\xi=\frac{1}{2Q}$} \\
+	\hline
+	
 	\textcolor{darkgrey}{Standardstartbedingungen} &
 	\begin{minipage}{7cm}
     	\vspace{0.1cm}
@@ -100,9 +93,16 @@ werden.\\
 		\\
 	\hline
 	\end{tabular}
+	
+\renewcommand{\arraystretch}{\arraystretchOriginal}
 
 
 \subsection{Erzwungene Schwingung}	
+
+
+
+
+
 \begin{tabular}{| p{4cm} | p{14.4cm}|}
 	\hline
 	Maximalwerte &
@@ -120,10 +120,7 @@ werden.\\
     \end{minipage}\\
 	\hline
 	Bandbreite, Verstimmung &
-	\begin{minipage}{7cm}
-		\includegraphics[width=6cm]{./bilder/Bandbreite.jpg}
-   	\end{minipage}
-	\vline \hspace{0.1cm}
+\input{tikzPictures/BandbreiteVerstimmung}
 	\begin{minipage}[c]{7cm}
   		$b_w = \omega_2 - \omega_1 = \dfrac{\omega_r}{Q}$\\
   		$B = \dfrac{f_r}{Q}=\dfrac{b_w}{2\pi}$\\\\
