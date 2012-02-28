@@ -100,50 +100,40 @@ werden.\\
 \subsection{Erzwungene Schwingung}	
 
 
-
-
-
-\begin{tabular}{| p{4cm} | p{14.4cm}|}
+\begin{tabular}{|p{4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|}
 	\hline
-	Maximalwerte &
-	\begin{minipage}{7cm}
-    	\vspace{0.1cm}
-   		$I_{Lmax}=I_{Cmax}=\dfrac{I\cdot
-   		Q_P}{\sqrt{1-\frac{1}{4Q_P}}}$ \vspace{0.1cm}\\ $\omega_{I_{Lmax}} =
-   		\omega_r\sqrt{1-\frac{1}{2Q_P^2}}\qquad \omega_{I_{Cmax}} = \dfrac{\omega_r}{\sqrt{1-\frac{1}{2Q_P^2}}}$\\
-   	\end{minipage}
-	\vline \hspace{0.1cm}
-	\begin{minipage}[b]{7cm}
-    	Gilt auch für $U_{Lmax}=U_{Cmax}$ bei dem Serieschwingkreis, jedoch muss
-    	$Q_P$ mit $Q_s$ ersetzt werden.
-    	\vspace{0.2cm}    	
-    \end{minipage}\\
+		Maximalwerte &
+		\multicolumn{3}{|l|}{$I_{Lmax}=I_{Cmax}=\dfrac{I\cdot
+   		Q_P}{\sqrt{1-\frac{1}{4Q_P}}}$} &
+   	\multicolumn{3}{|l|}{Gilt auch für $U_{Lmax}=U_{Cmax}$ bei
+   		dem Serieschwing- } \\
+    & \multicolumn{3}{|l|}{$\omega_{I_{Lmax}} =
+   		\omega_r\sqrt{1-\frac{1}{2Q_P^2}}\qquad \omega_{I_{Cmax}} =
+   		\dfrac{\omega_r}{\sqrt{1-\frac{1}{2Q_P^2}}}$} &
+   		\multicolumn{3}{|l|}{kreis, jedoch muss $Q_P$ mit $Q_s$ ersetzt werden.}\\
+   \hline
+   	Bandbreite, Verstimmung &
+		\multicolumn{3}{|l|}{} &
+		\multicolumn{3}{|l|}{
+			\begin{minipage}[c]{7cm}
+  			$b_w = \omega_2 - \omega_1 = \dfrac{\omega_r}{Q}$\\
+  			$B = \dfrac{f_r}{Q}=\dfrac{b_w}{2\pi}$\\\\
+				$\eta = \dfrac{\omega}{\omega_r} - \dfrac{\omega_r}{\omega} \qquad
+				\dfrac{Z}{R} = \dfrac{U}{U_{max}} = \dfrac{1}{\sqrt{1 + (\eta Q)^2}}$
+			\end{minipage}}\\
 	\hline
-	Bandbreite, Verstimmung &
-\input{tikzPictures/BandbreiteVerstimmung}
-	\begin{minipage}[c]{7cm}
-  		$b_w = \omega_2 - \omega_1 = \dfrac{\omega_r}{Q}$\\
-  		$B = \dfrac{f_r}{Q}=\dfrac{b_w}{2\pi}$\\\\
-		$\eta = \dfrac{\omega}{\omega_r} - \dfrac{\omega_r}{\omega} \qquad
-		\dfrac{Z}{R} = \dfrac{U}{U_{max}} = \dfrac{1}{\sqrt{1 + (\eta Q)^2}}$
-\end{minipage}\\
+		& \multicolumn{2}{|l|}{$\omega = \omega_1$}
+		& \multicolumn{2}{|l|}{$\omega = \omega_r$}
+		& \multicolumn{2}{|l|}{$\omega = \omega_2$} \\
 	\hline
-	Zeigerdiagramme &
-	\begin{minipage}{4.6cm}
-    	\vspace{0.1cm}
-		\includegraphics[width=4cm]{./bilder/Zeigerdiagramm_w1.jpg}\\ 
-    \end{minipage}
-	\vline \hspace{0.1cm}
-	\begin{minipage}{4.6cm}
-  		\includegraphics[width=4cm]{./bilder/Zeigerdiagramm_wr.jpg}
-    \end{minipage}
-	\vline \hspace{0.1cm}
-	\begin{minipage}{4.6cm}
- 		\includegraphics[width=4cm]{./bilder/Zeigerdiagramm_w2.jpg}   
-    \end{minipage}\\
+		Zeigerdiagramme &
+		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammL}} &
+		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammM}} &
+		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammR}} \\
 	\hline
 \end{tabular}
-\renewcommand{\arraystretch}{1}
+
+\renewcommand{\arraystretch}{\arraystretchOriginal}
 
 \subsection{Verlustbehafteter Schwingkreis}
 Resonanzfrequenz $\omega_r$ tritt dort auf, wo 
