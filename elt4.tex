@@ -14,8 +14,22 @@ Arnold, S. Ferreti}
 %
 % DORT NUR ERGÄNZEN, NICHTS LÖSCHEN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-\include{header}
+\include{header/header}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Aus altem Header
+\usepackage{esint} %double integral with a circle around
+\usepackage{tikz}
+\usetikzlibrary{circuits.ee.IEC}
+\usepackage{pgfplots}
+
+\newcommand{\jom}{j \omega} % Deprecated!
+%Zeichnet einen 3D-Vektor als Matrix
+\newcommand{\ddvector}[3]{\left(\begin{array}{c}#1\\#2\\#3\end{array}\right)} % Deprecated!
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Möglichst keine Ergänzungen hier, sondern in header.tex
 \begin{document} 
  
