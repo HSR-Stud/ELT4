@@ -134,54 +134,25 @@ Reaktanzdiagramme sind keinenfalls Masstäblich!}
 		
 			
 \subsection{Dualität}
-	\begin{tabular}{ll}
-    \parbox{11.5cm}{    		
-			\textbf{Vorgehen}
-			\begin{enumerate}{\setlength{\itemsep}{0cm}\setlength{\parsep}{0cm} \setlength{\topsep}{0cm}}
-	          \item Netzwerk ohne Kreuzungen aufzeichnen
-	          \item In jede Masche (auch in Umfangsmasche) einen dualen Knoten
-	          setzen
-	          \item Knoten von anstossenden Maschen verbinden. Jeder dieser Maschen
-	          hat gemeinsamen Zweig (dualen Zweig). 
-	          \item  In die dualen Zweige die dualen Schaltungselemente einsetzen.
-	        \end{enumerate}
-    	}
-    	& \parbox{6.5cm}{
-    		\begin{tabular}{c c}
-            $C \leftrightarrow L$ 
-            	&$R \leftrightarrow G$ \\
-            $u \leftrightarrow i$
-            	& $\underline{Z} \leftrightarrow \underline{Y}$ \\
-            Knoten $\leftrightarrow$ Masche
-            	& Stern $\leftrightarrow$ Dreieck \\
-            \multicolumn{2}{c}{Parallelschaltung $\leftrightarrow$
-            	Serieschaltung} \\
-            \multicolumn{2}{c}{Stromquelle $\leftrightarrow$ Spannungsquelle}            
-	        \end{tabular}
-			\vspace{.1cm} 
+\textbf{Vorgehen}
+\begin{enumerate}{\setlength{\itemsep}{0cm}\setlength{\parsep}{0cm} \setlength{\topsep}{0cm}}
+	\item Netzwerk ohne Kreuzungen aufzeichnen
+	\item In jede Masche (auch in Umfangsmasche) einen dualen Knoten setzen
+	\item Knoten von anstossenden Maschen verbinden. Jeder dieser Maschen hat
+	gemeinsamen Zweig (dualen Zweig).
+	\item In die dualen Zweige die dualen Schaltungselemente einsetzen.
+	\item Dualfaktor $D [\Omega]$ wählen und Werte der dualen Netzwerk-Elemente
+	bestimmen.
+\end{enumerate}
 
-			\textbf{Zahlenwerte der Dual-Elemente}\\
-			\begin{minipage}{2cm}
-	        	$R'=D^2G$ \\
-	        	$L'=D^2C$
-	        \end{minipage}
-			\begin{minipage}{2cm}
-	        	$C'=\frac{L}{D^2}$ \\
-	        	$G'=\frac{R}{D^2}$
-	        \end{minipage}
-			\begin{minipage}{2cm}
-	        	$U'=DI$ \\
-	        	$I'=\frac{U}{D}$
-	        \end{minipage}
-			\begin{minipage}{4cm}
-	        	$D =$Dualfaktor $[\Omega]$
-	        \end{minipage}
-			\vspace{.1cm} 
-
-    		\textbf{Impedanzfunktion}
-    		$Z_D(s) = \frac{1}{Z_(s)}$ \\
-    	}
-    \end{tabular}
+\begin{tabular}{llllllll}
+$R'=D^2G$ & $L'=D^2C$ & $\underline{U}'=D\underline{I}$ & $G'=\frac{R}{D^2}$ &
+$C'=\frac{L}{D^2}$ & $I'=\frac{\underline{U}}{D}$ & Knoten $\leftrightarrow$
+Masche & Stern $\leftrightarrow$ Dreieck \\
+$R \leftrightarrow G $ & $C \leftrightarrow L$ & $u \leftrightarrow i$ &
+$\underline{Z} \leftrightarrow \underline{Y}$ & & & Parallel $\leftrightarrow$
+Serie & Stromquelle $\leftrightarrow$ Spannungsquelle\\
+\end{tabular}
 
 \subsection{Netzwerksynthese}
 	\begin{tabular}{ll}
