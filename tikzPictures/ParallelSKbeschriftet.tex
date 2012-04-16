@@ -1,18 +1,30 @@
-\begin{tikzpicture}[circuit ee IEC, x=2cm, y=2cm, semithick]
-	\node (topR) [contact] at (0,1) {};
-	\node (bottomR) [contact] at (0,0) {};
-	\node at (0,1.2) {};
-	
-	\draw (topR) to [current direction={very near start, info=$i_R$},
-					 resistor={info=R}] (bottomR);
-	\draw (topR) -- ++(left:1) 
-		to [current direction={very near start, info=$i_L$},
-		    inductor={info=L}] ++(down:1)
-		-- +(right:1);
-	\draw (topR) -- ++(right:1)
-		to [current direction={very near start, info=$i_C$},
-		    capacitor={info=C}] ++(down:1)
-		-- +(left:1);
-	\draw[-to, shorten <= 0.2cm,shorten >=0.2cm] (-1.2,1) 
-		to node[anchor=east] {$u(t)$} (-1.2,0);
-\end{tikzpicture}
+% \begin{tikzpicture}[circuit ee IEC, x=2cm, y=2cm, semithick]
+% 	\node (topR) [contact] at (0,1) {};
+% 	\node (bottomR) [contact] at (0,0) {};
+% 	\node at (0,1.2) {};
+% 	
+% 	\draw (topR) to [current direction={very near start, info=$i_R$},
+% 					 resistor={info=R}] (bottomR);
+% 	\draw (topR) -- ++(left:1) 
+% 		to [current direction={very near start, info=$i_L$},
+% 		    inductor={info=L}] ++(down:1)
+% 		-- +(right:1);
+% 	\draw (topR) -- ++(right:1)
+% 		to [current direction={very near start, info=$i_C$},
+% 		    capacitor={info=C}] ++(down:1)
+% 		-- +(left:1);
+% 	\draw[-to, shorten <= 0.2cm,shorten >=0.2cm] (-1.2,1) 
+% 		to node[anchor=east] {$u(t)$} (-1.2,0);
+% \end{tikzpicture}
+
+\begin{circuitikz}[scale=2, european, american inductors, yscale=0.3]
+\ctikzset{bipoles/length=0.5cm}
+\draw (0,0)
+	to[short, *-] (0.1cm,0)
+	(0.1cm,0.5) to[short] (0.1cm,-0.5)
+	(0.1cm,0.5) to [L] (0.6cm,0.5)
+	(0.1cm,-0.5) to [C] (0.6cm,-0.5)
+	(0.6cm,0.5) to [short] (0.6cm,-0.5)
+	(0.6cm,0) to [short, -*] (0.7cm,0)
+	;	
+\end{circuitikz}

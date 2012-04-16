@@ -33,99 +33,87 @@
     \end{enumerate}
 	
 	
+
+\renewcommand{\arraystretch}{2}
+\begin{sidewaystable}
 \subsection{RET-Typen}
-	\renewcommand{\arraystretch}{1.1}
-	\begin{tabular}{| c | c | c c | c | c |}
-		\hline
-		& &
-		\multicolumn{2}{|c|}{\textbf{Impedanzfunktion}}
-		& & \\
-			\textbf{Typ}
-			& \textbf{Reaktanz}
-			& \textbf{Summenform} 
-			& \textbf{Produktform}
-			& \textbf{Verhalten gegen 0/$\infty$} 
-			& \textbf{Grad/Potenz}\\
-		\hline
-			\parbox{1.6cm}{
-				L-Typ \\
-				\includegraphics[width=1.5cm]{./bilder/LTyp}
-			}
-			& \parbox{3.2cm}{
-				\includegraphics[width=3cm]{./bilder/RET-LTyp}
-			}
-			& $ \underline{Z}(p)=p\frac{a_np^{n-1}+ \ldots +a_1}{b_mp^m+ \ldots b_0}$
-			& $ = \frac{\jom L_{\infty}[(\jom)^2 + \omega_3^2][\ldots]}{[(\jom)^2 +
-			\omega_2^2][\ldots]}$ 
-			& $ \begin{matrix}
-            		\underline{Z}(p)\mid_{\rightarrow\infty}=p\frac{a_n}{b_m}=pL_{\infty}\\
-            		\underline{Z}(p)\mid_{\rightarrow 0}=p\frac{a_1}{b_0}=pL_{0}
-              	\end{matrix}$
-			& $ \begin{matrix}
-            		n: ungerade \\
-            		m=n-1
-                \end{matrix}$\\
-		\hline
-			\parbox{1.6cm}{
-				C-Typ \\
-				\includegraphics[width=1.5cm]{./bilder/CTyp}
-			}
-			& \parbox{3.2cm}{
-				\includegraphics[width=3cm]{./bilder/RET-CTyp}
-			}
-			& $ \underline{Z}(p)=\frac{1}{p} \frac{a_np^{n}+ \ldots +a_0}{b_mp^{m-1}+ \ldots b_1}$
-			& $ = \frac{[(\jom)^2 + \omega_2^2][\ldots]}
-					{\jom C_{\infty}[(\jom)^2 + \omega_3^2][\ldots]}$ 
-			& $ \begin{matrix}
-					\underline{Z}(p)\mid_{\rightarrow\infty}=\frac{1}{p}\frac{a_n}{b_m}=\frac{1}{pC_{\infty}}\\
-					\underline{Z}(p)\mid_{\rightarrow 0}=\frac{1}{p}\frac{a_1}{b_0}=\frac{1}{pC_{0}}
-				\end{matrix}$
-			& $ \begin{matrix}
-					n: gerade \\
-					m=n+1
-				\end{matrix}$\\
-		\hline
-			\parbox{1.6cm}{
-				P-Typ \\
-				\includegraphics[width=1.5cm]{./bilder/PTyp}
-			}
-			& \parbox{3.2cm}{
-				\includegraphics[width=3cm]{./bilder/RET-PTyp}
-			}
-			& $ \underline{Z}(p)=p\frac{a_np^{n-1}+ \ldots +a_1}{b_mp^m+ \ldots b_0}$
-			& $ = \frac{\jom[(\jom)^2 + \omega_3^2][\ldots]}
-					{C_{\infty}[(\jom)^2 + \omega_2^2][(\jom)^2 + \omega_4^2]\ldots]}$ 
-			& $ \begin{matrix}
-					\underline{Z}(p)\mid_{\rightarrow\infty}=\frac{1}{p}\frac{a_n}{b_m}=\frac{1}{pC_{\infty}}\\
-					\underline{Z}(p)\mid_{\rightarrow 0}=p\frac{a_1}{b_0}=pL_{0}
-				\end{matrix}$
-			& $ \begin{matrix}
-               		n: ungerade\\
-               		m=n+1
-                \end{matrix}$\\
-		\hline
-			\parbox{1.6cm}{
-				S-Typ \\
-				\includegraphics[width=1.5cm]{./bilder/STyp}
-			}
-			& \parbox{3.2cm}{
-				\includegraphics[width=3cm]{./bilder/RET-STyp}
-			}
-			& $ \underline{Z}(p)=\frac{1}{p} \frac{a_np^{n}+ \ldots +a_0}{b_mp^{m-1}+ \ldots b_1}$
-			& $ = \frac{[L_{\infty}(\jom)^2 + \omega_2^2][(\jom)^2 +
-				\omega_4^2][\ldots]} 
-				{\jom[(\jom)^2 + \omega_3^2]\ldots]}$
-			& $ \begin{matrix}
-					\underline{Z}(p)\mid_{\rightarrow\infty}=p\frac{a_n}{b_m}=pL_{\infty}\\
-					\underline{Z}(p)\mid_{\rightarrow 0}=\frac{1}{p}\frac{a_1}{b_0}=\frac{1}{pC_{0}}
-				\end{matrix}$
-			& $ \begin{matrix}
-               		n: gerade\\
-               		m=n-1
-                \end{matrix}$\\
-		\hline
-	\end{tabular}
-	\renewcommand{\arraystretch}{1}
+\begin{tabular}{|l|l|l|l|l|l|p{1.5cm}|p{1.9cm}|}
+\hline
+	\textbf{Symbol} &
+	\textbf{Typ} &
+	\textbf{Reaktanz} &
+	\textbf{Impedanzfunktion} &
+	\multicolumn{2}{|c|}{\textbf{Eigenschaften}} &
+	$\bf \boldsymbol\omega = 0$ \newline $\bf \boldsymbol\omega \rightarrow \boldsymbol\infty$ &
+	Nenner (n) \newline	Zähler (m) 
+	\\
+\hline
+	\parbox[c][1.5cm]{1.2cm}{\input{tikzPictures/RET/L.tex}} &
+	L-Typ &
+	\parbox[c][3cm]{5.3cm}{\input{tikzPictures/RET/ReaktanzLTyp.tex}}&
+	\begin{tabular}{cl}
+	 $ \underline{Z}(p)$ & $ =p\frac{a_np^{n-1}+ \ldots +a_1}{b_mp^m+ \ldots b_0}$
+	 \\ 
+	 & $=\frac{j\omega
+	L_{\infty}[(j\omega)^2+\omega_3^2][\ldots]}{[(j\omega)^2+\omega_2^2][\ldots]}$
+	\end{tabular} &
+	L-Kreis &
+	L-TB &
+	Null \newline Pol &
+	ungerade \newline $m=n-1$
+	\\
+\hline
+	\parbox[c][1.5cm]{1.2cm}{\input{tikzPictures/RET/C.tex}} &
+	C-Typ &
+	\parbox[c][3cm]{5.3cm}{\input{tikzPictures/RET/ReaktanzCTyp.tex}} &
+	\begin{tabular}{cl}
+	  $\underline{Z}(p)$&
+	  $=\frac{1}{p}\frac{a_np^{n}+ \ldots +a_0}{b_mp^{m-1}+\ldots	b_1} $ \\
+	  & $=\frac{[(j\omega)^2+\omega_2^2][\ldots]}{j\omega
+	  C_{\infty}[(j\omega)^2+\omega_3^2][\ldots]}$	  
+	\end{tabular} &
+	C-Kreis &	
+	C-TB &
+	Pol \newline Null &
+	gerade \newline $m=n+1$
+	\\
+\hline
+	\parbox[c][1.5cm]{1.2cm}{\input{tikzPictures/RET/LCSer.tex}} &
+	S-Typ &
+	\parbox[c][3cm]{5.3cm}{\input{tikzPictures/RET/ReaktanzSTyp.tex}} &
+	\begin{tabular}{cl}
+	  $\underline{Z}(p)$&
+	  $=\frac{1}{p}\frac{a_np^{n}+\ldots+a_0}{b_mp^{m-1}+\ldots
+	  b_1}$\\
+	  &
+	  $=\frac{[L_{\infty}(j\omega)^2+\omega_2^2][(j\omega)^2+\omega_4^2][\ldots]}{j\omega[(j\omega)^2+\omega_3^2]\ldots]}$
+	\end{tabular} &
+	C-TB &
+	L-TB &
+	Pol \newline Pol &
+	gerade \newline $m=n-1$
+	\\
+\hline
+	\parbox[c][1.5cm]{1.2cm}{\input{tikzPictures/RET/LCPar.tex}} &
+	P-Typ &
+	\parbox[c][3cm]{5.3cm}{\input{tikzPictures/RET/ReaktanzPTyp.tex}} &
+	\begin{tabular}{cl}
+	  $\underline{Z}(p)$&
+	  $=p\frac{a_np^{n-1}+\ldots +a_1}{b_mp^m+\ldots b_0}$ \\
+	  & $=\frac{j\omega[(j\omega)^2+\omega_3^2][\ldots]}{C_{\infty}[(j\omega)^2+\omega_2^2][(j\omega)^2+\omega_4^2]\ldots]}$
+	\end{tabular} &
+	C-Kreis & L-Kreis &
+	Null \newline Null &
+	ungerade \newline $m=n+1$
+	\\
+\hline
+\end{tabular}
+\caption[Bestimmung des RET-Typ]{Bestimmung des RET-Typ. Die Bezeichnungen
+Klemmentrennbündel und Klemmenkreis wurden abgekürzt zu TB und Kreis. Die
+Reaktanzdiagramme sind keinenfalls Masstäblich!}
+\label{tab:RETTyp}
+\end{sidewaystable}
+\renewcommand{\arraystretch}{\arraystretchOriginal}
 \newpage		
 		
 \subsection{Minimalreaktanzeintor (MRET)}
