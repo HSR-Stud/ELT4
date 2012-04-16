@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=0.6, yscale=0.6, thick]
+	%Koordinatensystem
+	\draw[->] (-0.2,0) -- +(right:4.5) node[right] {$\omega$};
+	\draw[->] (0,-3.2) -- +(north:4) node[above] {$X$};
+	\draw plot[domain=0.3:4] (\x,{-1/(\x)})
+	node[below] {$C$};
+\end{tikzpicture}
+
+
