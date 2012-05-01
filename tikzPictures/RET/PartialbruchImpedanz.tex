@@ -1,0 +1,17 @@
+\begin{circuitikz}[scale=2, european, american inductors]
+\ctikzset{bipoles/length=1.2cm}
+\draw (0,0)
+	to [L = $2/3H$, *-] (1,0)
+	to [C = $15/24F$, -*] (2,0);
+\draw (2,0.5) -- (2,-0.5);
+\draw (2,0.5) to [L = $4/9H$] (3,0.5);
+\draw (2,-0.5) to [C = $9/8H$] (3,-0.5);
+\draw (3,0.5) -- (3,-0.5);
+\draw (3,0) to [short, *-*] (3.5,0);
+\draw (3.5,0.5) -- (3.5,-0.5);
+\draw (3.5,0.5) to [L = $8/225H$] (4.5,0.5);
+\draw (3.5,-0.5) to [C = $45/8H$] (4.5,-0.5);
+\draw (4.5,0.5) -- (4.5,-0.5);
+\draw (4.5,0) to [short, *-*] (5,0);
+	;	
+\end{circuitikz}

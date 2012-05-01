@@ -154,7 +154,39 @@ $\underline{Z} \leftrightarrow \underline{Y}$ & & & Parallel $\leftrightarrow$
 Serie & Stromquelle $\leftrightarrow$ Spannungsquelle\\
 \end{tabular}
 
-\subsection{Netzwerksynthese}
+\subsection{RET-Synthese}
+\begin{multicols}{2}
+\subsubsection{Mittels Partialbruchzerlegung}
+	\begin{enumerate}
+	  \item $F(p)=\frac{2p^6+22p^4+68p^2+48}{3p^5+21p^3+30p}$
+	  \item $F(p)$ ausdividieren, falls Zählergrad $>$ Nennergrad
+	  \item Nenner des echten Bruches zerlegen und Ansatz bilden
+	  $\frac{2}{3}p+\frac{8p^4+48p^2+48}{3p^5+21p^3+30p}=\frac{A}{3p}+\frac{Bp}{p^2+2}+\frac{Cp}{p^2+5}$
+		\item Erweitern und Koeffizienten bestimmen $A=\frac{24}{5} \qquad
+		B=\frac{8}{9} \qquad C=\frac{8}{45}$
+		\item Koeffizienten einsetzen
+		$F(p)=\frac{2}{3}p+\frac{1}{\frac{15}{24}p}+\frac{1}{\frac{9}{8}p+\frac{1}{\frac{4}{9}p}}+\frac{1}{\frac{45}{8}p+\frac{1}{\frac{8}{255}p}}$
+		\item Schaltung aufzeichnen:	  
+	\end{enumerate}
+	Impedanzfunktion $Z(p)$\\
+	\input{tikzPictures/RET/PartialbruchImpedanz}\\
+	Admittanzfunktion $Y(p)$\\
+	\input{tikzPictures/RET/PartialbruchAddmitanz}\\
+\subsubsection{Mittels Kettenbruchzerlegung}
+\begin{enumerate}
+	\item $F(p)=\frac{2p^6+22p^4+68p^2+48}{3p^5+21p^3+30p}$
+	\item $F(p)$ ausdividieren $=\frac{2}{3}p+\frac{8p^4+48p^2+48}{3p^5+21p^3+30p}$
+	\item Kehrwert des Restes wieder ausdividieren
+	$\frac{2}{3}p+\frac{1}{\frac{3p^5+21p^3+30p}{8p^4+48p^2+48}}=\frac{2}{3}p+\frac{1}{\frac{3}{8}p+\frac{3p^3+12p}{8p^4+48p^2+48}}$
+	\item Schritt zwei wiederholen bis kein Rest mehr vorhanden ist
+	$F(P)=\frac{2}{3}p+\frac{1}{\frac{3}{8}p+\frac{1}{\frac{8}{3}p+\frac{1}{\frac{3}{16}p+\frac{1}{\frac{16}{3}p+\frac{1}{\frac{1}{16}p}}}}}$
+	\item Schaltung aufzeichnen:
+\end{enumerate}
+%TODO
+\end{multicols}
+
+
+
 	\begin{tabular}{ll}
     	\parbox{9cm}{
 			\textbf{Mittels Partialbruchzerlegung}
