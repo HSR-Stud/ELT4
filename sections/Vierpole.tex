@@ -1,6 +1,6 @@
 
 \section{Vierpole}
-
+\begin{sidewaystable}
 \subsection{Vierpolgleichungen und ihre Parameter}
 	\begin{minipage}{5cm}
     	\includegraphics[height=1.5cm]{./bilder/vierpol}
@@ -112,16 +112,105 @@
 				\end{bmatrix}$\\
 		\hline
 	\end{tabular}
-	\renewcommand{\arraystretch}{1}
+	\renewcommand{\arraystretch}{\arraystretchOriginal}
 	
-
+	\subsection{Spezielle 2-Tore}
+	\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{| c | c | c | c|}
+			\hline
+				& \textbf{Z} 
+				& \textbf{Y}
+				& \textbf{A}\\
+			\hline
+				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Querimpedanz}}
+				& $ \begin{bmatrix}
+						\underline{Z}_{a} & \underline{Z}_{a} \\
+						\underline{Z}_{a} & \underline{Z}_{a} \\
+					\end{bmatrix}$
+				& -
+				& $ \begin{bmatrix}
+						1 & 0 \\
+						\frac{1}{\underline{Z}_{a}} & 1 \\
+					\end{bmatrix}$\\
+			\hline
+				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Laengsimpedanz}}
+				& -
+				& $ \begin{bmatrix}
+						\frac{1}{\underline{Z}_{b}} & -\frac{1}{\underline{Z}_{b}} \\
+						-\frac{1}{\underline{Z}_{b}} & \frac{1}{\underline{Z}_{b}} \\
+					\end{bmatrix}$
+				& $ \begin{bmatrix}
+						1 & \underline{Z}_{b} \\
+						0 & 1 \\
+					\end{bmatrix}$\\
+			\hline
+				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/TGlied}}
+				& $ \begin{bmatrix}
+						\underline{Z}_{1}+\underline{Z}_{2} & \underline{Z}_{2} \\
+						\underline{Z}_{2} & \underline{Z}_{2}+\underline{Z}_{3} \\
+					\end{bmatrix}$
+				& $ \frac{1}{\underline{Z}_{1}\underline{Z}_{2}+\underline{Z}_{2}\underline{Z}_{3}+\underline{Z}_{1}\underline{Z}_{3}}
+					\begin{bmatrix}
+						\underline{Z}_{2}+\underline{Z}_{3} & -\underline{Z}_{2} \\
+						-\underline{Z}_{2} & \underline{Z}_{1}+\underline{Z}_{2} \\
+					\end{bmatrix}$
+				& $ \begin{bmatrix}
+						1+\frac{\underline{Z}_{1}}{\underline{Z}_{2}} & \underline{Z}_{1}+\underline{Z}_{3}+\frac{\underline{Z}_{1}\underline{Z}_{3}}{\underline{Z}_{2}} \\
+						\frac{1}{\underline{Z}_{2}} & 1+\frac{\underline{Z}_{3}}{\underline{Z}_{2}} \\
+					\end{bmatrix}$\\
+			\hline
+				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/PiGlied}}
+				& $ \frac{1}{\underline{Z}_{1}+\underline{Z}_{2}+\underline{Z}_{3}}
+					\begin{bmatrix}
+						\underline{Z}_{1}(\underline{Z}_{2}+\underline{Z}_{3}) & -\underline{Z}_{1}\underline{Z}_{3} \\
+						-\underline{Z}_{1}\underline{Z}_{3} & \underline{Z}_{3}(\underline{Z}_{1}+\underline{Z}_{2}) \\
+					\end{bmatrix}$
+				& $ \begin{bmatrix}
+						\frac{1}{\underline{Z}_{1}}+\frac{1}{\underline{Z}_{2}} & -\frac{1}{\underline{Z}_{2}} \\
+						-\frac{1}{\underline{Z}_{2}} & \frac{1}{\underline{Z}_{2}}+\frac{1}{\underline{Z}_{3}} \\
+					\end{bmatrix}$
+				& $ \begin{bmatrix}
+						1+\frac{\underline{Z}_{2}}{\underline{Z}_{3}} & \underline{Z}_{2} \\
+						\frac{1}{\underline{Z}_{1}}+\frac{1}{\underline{Z}_{3}}+\frac{\underline{Z}_{2}}{\underline{Z}_{1}\underline{Z}_{3}} & 1+\frac{\underline{Z}_{2}}{\underline{Z}_{1}} \\
+					\end{bmatrix}$\\
+			\hline
+				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Vierpol-Uebertrager}}
+				& existiert nicht
+				& existiert nicht
+				& $ \begin{bmatrix}
+						n & 0 \\
+						0 & \frac{1}{n} \\
+					\end{bmatrix}$\\
+			\hline
+				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Vierpol-Gegeninduktivitaet}}
+				& $ \begin{bmatrix}
+						sL_1 & sM \\
+						sM & sL_2 \\
+					\end{bmatrix}$
+				& $ \frac{1}{\sigma}
+					\begin{bmatrix}
+						\frac{1}{sL_1} & -\frac{k^2}{sM} \\
+						-\frac{k^2}{sM} & \frac{1}{sL_2}\\ 
+					\end{bmatrix}$
+					\qquad $\sigma = 1 - k^2$
+				& $ \begin{bmatrix}
+						\frac{L_1}{M} & sM ( k^{-2} -1) \\
+						\frac{1}{sM} & \frac{L_2}{M} \\
+					\end{bmatrix}$
+					\qquad $k = \frac{M}{\sqrt{L_1 L_2}}$\\
+			\hline
+		\end{tabular}
+	\renewcommand{\arraystretch}{\arraystretchOriginal}
+		
+	\end{sidewaystable}
+% 
 % \subsection{Umrechnung Zweitorparameter}
 % 	\renewcommand{\arraystretch}{1.1}
 % 		\begin{tabular}{| c | c | c | c | c |}
 % 			\hline
 % 				\textbf{Matrix}
-% 				& \textbf{Z-Matrix} 
-% 				& \textbf{Y-Matrix} 
+% 				& \textbf{Z-Matrix}
+% 				& \textbf{Y-Matrix}
 % 				& \textbf{A-Matrix}
 % 				& \textbf{H-Matrix}\\
 % 			\hline
@@ -130,7 +219,7 @@
 % 						\underline{Z}_{11} & \underline{Z}_{12} \\
 % 						\underline{Z}_{21} & \underline{Z}_{22} \\
 % 					\end{bmatrix}$
-% 				& $ \frac{1}{det(Y)} 
+% 				& $ \frac{1}{det(Y)}
 % 					\begin{bmatrix}
 % 						\underline{Y}_{22} & -\underline{Y}_{12} \\
 % 						-\underline{Y}_{21} & \underline{Y}_{11} \\
@@ -248,7 +337,7 @@
 				& $\frac{1}{\underline{H}_{22}}$\\
 			\hline
 		\end{tabular}
-	\renewcommand{\arraystretch}{1}
+	\renewcommand{\arraystretch}{\arraystretchOriginal}
 		\begin{minipage}{4cm}
 	    	\includegraphics[height=1.8cm]{./bilder/sekKurzschluss}\\
 			\includegraphics[height=1.8cm]{./bilder/sekLeerlauf}
@@ -389,7 +478,7 @@
 					\end{matrix}$\\
 			\hline
 		\end{tabular}
-	\renewcommand{\arraystretch}{1}
+	\renewcommand{\arraystretch}{\arraystretchOriginal}
 \newpage
 	
 \subsection{Umkehrung eines 2-Tores}
@@ -431,96 +520,9 @@
 				& $\frac{1}{\det(H)}$\\
 			\hline
 		\end{tabular}
-	\renewcommand{\arraystretch}{1}
+	\renewcommand{\arraystretch}{\arraystretchOriginal}
 	
 	
 	
-\subsection{Spezielle 2-Tore}
-	\renewcommand{\arraystretch}{1.1}
-		\begin{tabular}{| c | c | c | c|}
-			\hline
-				& \textbf{Z} 
-				& \textbf{Y}
-				& \textbf{A}\\
-			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Querimpedanz}}
-				& $ \begin{bmatrix}
-						\underline{Z}_{a} & \underline{Z}_{a} \\
-						\underline{Z}_{a} & \underline{Z}_{a} \\
-					\end{bmatrix}$
-				& -
-				& $ \begin{bmatrix}
-						1 & 0 \\
-						\frac{1}{\underline{Z}_{a}} & 1 \\
-					\end{bmatrix}$\\
-			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Laengsimpedanz}}
-				& -
-				& $ \begin{bmatrix}
-						\frac{1}{\underline{Z}_{b}} & -\frac{1}{\underline{Z}_{b}} \\
-						-\frac{1}{\underline{Z}_{b}} & \frac{1}{\underline{Z}_{b}} \\
-					\end{bmatrix}$
-				& $ \begin{bmatrix}
-						1 & \underline{Z}_{b} \\
-						0 & 1 \\
-					\end{bmatrix}$\\
-			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/TGlied}}
-				& $ \begin{bmatrix}
-						\underline{Z}_{1}+\underline{Z}_{2} & \underline{Z}_{2} \\
-						\underline{Z}_{2} & \underline{Z}_{2}+\underline{Z}_{3} \\
-					\end{bmatrix}$
-				& $ \frac{1}{\underline{Z}_{1}\underline{Z}_{2}+\underline{Z}_{2}\underline{Z}_{3}+\underline{Z}_{1}\underline{Z}_{3}}
-					\begin{bmatrix}
-						\underline{Z}_{2}+\underline{Z}_{3} & -\underline{Z}_{2} \\
-						-\underline{Z}_{2} & \underline{Z}_{1}+\underline{Z}_{2} \\
-					\end{bmatrix}$
-				& $ \begin{bmatrix}
-						1+\frac{\underline{Z}_{1}}{\underline{Z}_{2}} & \underline{Z}_{1}+\underline{Z}_{3}+\frac{\underline{Z}_{1}\underline{Z}_{3}}{\underline{Z}_{2}} \\
-						\frac{1}{\underline{Z}_{2}} & 1+\frac{\underline{Z}_{3}}{\underline{Z}_{2}} \\
-					\end{bmatrix}$\\
-			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/PiGlied}}
-				& $ \frac{1}{\underline{Z}_{1}+\underline{Z}_{2}+\underline{Z}_{3}}
-					\begin{bmatrix}
-						\underline{Z}_{1}(\underline{Z}_{2}+\underline{Z}_{3}) & -\underline{Z}_{1}\underline{Z}_{3} \\
-						-\underline{Z}_{1}\underline{Z}_{3} & \underline{Z}_{3}(\underline{Z}_{1}+\underline{Z}_{2}) \\
-					\end{bmatrix}$
-				& $ \begin{bmatrix}
-						\frac{1}{\underline{Z}_{1}}+\frac{1}{\underline{Z}_{2}} & -\frac{1}{\underline{Z}_{2}} \\
-						-\frac{1}{\underline{Z}_{2}} & \frac{1}{\underline{Z}_{2}}+\frac{1}{\underline{Z}_{3}} \\
-					\end{bmatrix}$
-				& $ \begin{bmatrix}
-						1+\frac{\underline{Z}_{2}}{\underline{Z}_{3}} & \underline{Z}_{2} \\
-						\frac{1}{\underline{Z}_{1}}+\frac{1}{\underline{Z}_{3}}+\frac{\underline{Z}_{2}}{\underline{Z}_{1}\underline{Z}_{3}} & 1+\frac{\underline{Z}_{2}}{\underline{Z}_{1}} \\
-					\end{bmatrix}$\\
-			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Vierpol-Uebertrager}}
-				& existiert nicht
-				& existiert nicht
-				& $ \begin{bmatrix}
-						n & 0 \\
-						0 & \frac{1}{n} \\
-					\end{bmatrix}$\\
-			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Vierpol-Gegeninduktivitaet}}
-				& $ \begin{bmatrix}
-						sL_1 & sM \\
-						sM & sL_2 \\
-					\end{bmatrix}$
-				& $ \frac{1}{\sigma}
-					\begin{bmatrix}
-						\frac{1}{sL_1} & -\frac{k^2}{sM} \\
-						-\frac{k^2}{sM} & \frac{1}{sL_2}\\ 
-					\end{bmatrix}$
-					\qquad $\sigma = 1 - k^2$
-				& $ \begin{bmatrix}
-						\frac{L_1}{M} & sM ( k^{-2} -1) \\
-						\frac{1}{sM} & \frac{L_2}{M} \\
-					\end{bmatrix}$
-					\qquad $k = \frac{M}{\sqrt{L_1 L_2}}$\\
-			\hline
-		\end{tabular}
-	\renewcommand{\arraystretch}{1}
-		
+
 		
