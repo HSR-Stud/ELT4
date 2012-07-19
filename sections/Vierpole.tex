@@ -413,31 +413,16 @@
 
 
 \subsection{Zusammenschalten von 2-Toren}
-	\begin{minipage}{10cm}
-    	%\textbf{Zusammengeschaltene 2-Tore}\\
-    	\begin{tabular}{| l | l |}
-        	\hline
-        		\tiny{Serieschaltung:}
-        		&\tiny{Parallelschaltung:}\\
-        		\parbox{4.7cm}{
-        			\includegraphics[width=4.7cm]{./bilder/Serieschaltung2Tore}
-        		}
-        		&\parbox{4.7cm}{
-    				\includegraphics[width=4.7cm]{./bilder/Parallelschaltung2Tore}
-        		}\\
-        	\hline
-        		\tiny{Serie-Parallelschaltung:}
-        		&\tiny{Kettenschaltung:}\\
-        		\parbox{4.7cm}{
-        			\includegraphics[width=4.7cm]{./bilder/SerieParallelschaltung2Tore}
-        		}
-        		&\parbox{4.7cm}{
-    				\includegraphics[width=4.7cm]{./bilder/Kettenschaltung2Tore}
-        		}\\
-        	\hline
-        \end{tabular}
-    \end{minipage} \\ \\
-
+\begin{tabular}{|l|l|l|l|}
+\hline
+ Serieschaltung & Serie-Parallelschaltung & Parallelschaltung & Kettenschaltung\\
+\hline
+\input{tikzPictures/Vierpole/Serieschaltung}&
+\input{tikzPictures/Vierpole/SerieParallelschaltung}&
+\input{tikzPictures/Vierpole/Parallelschaltung}&
+\input{tikzPictures/Vierpole/Kettenschaltung}\\
+\hline
+\end{tabular}\\
 	\renewcommand{\arraystretch}{1.1}
 		\begin{tabular}{| c | c | c |}
 			\hline
@@ -479,8 +464,6 @@
 			\hline
 		\end{tabular}
 	\renewcommand{\arraystretch}{\arraystretchOriginal}
-\newpage
-	
 \subsection{Umkehrung eines 2-Tores}
 	\renewcommand{\arraystretch}{1.1}
 		\begin{tabular}{| c | c | c |}
