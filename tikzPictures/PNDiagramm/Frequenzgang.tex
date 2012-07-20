@@ -1,0 +1,23 @@
+\begin{tikzpicture}[thick]
+	\draw [->] (-2.5,0) -- (2.5,0);
+	\node at (2.5,0) [anchor=west] {$\sigma$};
+	\draw [->] (0,-2) -- (0,2);
+	\node at (0,2) [anchor=south] {$j\omega$};
+	\draw [dashed] (-1,1) -- (1,1) -- (1,-1) -- (-1,-1) -- (-1,1);
+
+	\draw (-2,0) node[shape aspect=1,cross out,draw] {};
+	\draw (-1,1) node[shape aspect=1,cross out,draw] {};
+	\draw (-1,-1) node[shape aspect=1,cross out,draw] {};
+	
+	\draw (1,-1) node[shape aspect=1,circle ,draw] {};
+	\draw (1,1) node[shape aspect=1,circle ,draw] {};
+	\draw (2,0) node[shape aspect=1,circle ,draw] {};
+
+	\node at (-2,0) [anchor=north] {$-\sigma_2$};
+	\node at (-1,0) [anchor=north] {$-\sigma_1$};
+	\node at (1,0) [anchor=north] {$\sigma_1$};
+	\node at (2,0) [anchor=north] {$\sigma_2$};
+	
+	\node at (0,1) [anchor=north west] {$j\omega$};
+	\node at (0,-1) [anchor=north west] {$-j\omega$};
+\end{tikzpicture}

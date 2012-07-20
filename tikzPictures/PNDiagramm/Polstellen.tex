@@ -1,0 +1,19 @@
+\begin{tikzpicture}[thick]
+	\draw [->] (-3,0) -- (3,0);
+	\node at (3,0) [anchor=west] {$\sigma$};
+	\draw [->] (0,-3) -- (0,3);
+	\node at (0,3) [anchor=south] {$j\omega$};
+	\draw [dashed] (0,1) -- (1,1) -- (1,-1) -- (0,-1);
+	\draw (-2.5,0) node[shape aspect=1,cross out,draw] {};
+	\node at (-2.5,0) [anchor=north] {$-20s^{-1}$};
+	\draw (0,2) node[shape aspect=1,cross out,draw] {};
+	\node at (0,2) [anchor=west] {$j1000s^{-1}$};
+	\draw (1,1) node[shape aspect=1,cross out,draw] {};
+	\node at (1,1) [anchor=west] {$j500s^{-1}$};
+	\draw (1,-1) node[shape aspect=1,cross out,draw] {};
+	\node at (1,-1) [anchor=west] {$-j500s^{-1}$};
+	\draw (0,-2) node[shape aspect=1,cross out,draw] {};
+	\node at (0,-2) [anchor=west] {$-j1000s^{-1}$};
+	\draw [->] (1.5,-0.5) -- (1.1,-0.1);
+	\node at (1.5,-0.5) [anchor=west] {$4s^{-1}$};
+\end{tikzpicture}
