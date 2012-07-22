@@ -115,7 +115,7 @@
 	\renewcommand{\arraystretch}{\arraystretchOriginal}
 	
 	\subsection{Spezielle 2-Tore}
-	\renewcommand{\arraystretch}{1}
+	\renewcommand{\arraystretch}{0.7}
 		\begin{tabular}{|l | c | c | c | c|}
 			\hline
 				&
@@ -124,9 +124,10 @@
 				& \textbf{A}\\
 			\hline
 				Querimpedanz
-				& \input{./tikzPictures/Vierpole/Querimpedanz}
-				& $ \begin{bmatrix}
-						\underline{Z}_{a} & \underline{Z}_{a} \\
+				& 
+				\parbox{2.3cm}{\input{./tikzPictures/Vierpole/Querimpedanz}}
+				 & $
+				\begin{bmatrix} \underline{Z}_{a} & \underline{Z}_{a} \\
 						\underline{Z}_{a} & \underline{Z}_{a} \\
 					\end{bmatrix}$
 				& -
@@ -136,7 +137,7 @@
 					\end{bmatrix}$\\
 			\hline
 				Längsimpedanz
-				& \input{./tikzPictures/Vierpole/Laengsimpedanz}
+				& \parbox{2.6cm}{\input{./tikzPictures/Vierpole/Laengsimpedanz}}
 				& -
 				& $ \begin{bmatrix}
 						\frac{1}{\underline{Z}_{b}} & -\frac{1}{\underline{Z}_{b}} \\
@@ -148,7 +149,7 @@
 					\end{bmatrix}$\\
 			\hline
 				T-Glied
-				& \input{./tikzPictures/Vierpole/T-Glied}
+				& \parbox{2.6cm}{\input{./tikzPictures/Vierpole/T-Glied}}
 				& $ \begin{bmatrix}
 						\underline{Z}_{1}+\underline{Z}_{2} & \underline{Z}_{2} \\
 						\underline{Z}_{2} & \underline{Z}_{2}+\underline{Z}_{3} \\
@@ -164,7 +165,7 @@
 					\end{bmatrix}$\\
 			\hline
 				$\pi$-Glied
-				& \input{./tikzPictures/Vierpole/PI-Glied}
+				& \parbox{2.6cm}{\input{./tikzPictures/Vierpole/PI-Glied}}
 				& $ \frac{1}{\underline{Z}_{1}+\underline{Z}_{2}+\underline{Z}_{3}}
 					\begin{bmatrix}
 						\underline{Z}_{1}(\underline{Z}_{2}+\underline{Z}_{3}) & -\underline{Z}_{1}\underline{Z}_{3} \\
@@ -180,15 +181,15 @@
 					\end{bmatrix}$\\
 			\hline
 				Idealer Übertrager
-				&\input{./tikzPictures/Vierpole/IdealerUebertrager} & existiert nicht
-				& existiert nicht
+				&\parbox{2.6cm}{\input{./tikzPictures/Vierpole/IdealerUebertrager}} &
+				existiert nicht & existiert nicht
 				& $ \begin{bmatrix}
 						n & 0 \\
 						0 & \frac{1}{n} \\
 					\end{bmatrix}$\\
 			\hline
 				Gegeninduktivität
-				&\input{./tikzPictures/Vierpole/Gegeninduktivitaet}
+				&\parbox{2.6cm}{\input{./tikzPictures/Vierpole/Gegeninduktivitaet}}
 				& $ \begin{bmatrix}
 						sL_1 & sM \\
 						sM & sL_2 \\
