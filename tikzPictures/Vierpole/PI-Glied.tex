@@ -1,0 +1,11 @@
+\ctikzset{bipoles/length=20pt}
+\begin{circuitikz}[scale=1, european, american inductors]
+	\draw (0,0) to [short, *-] (0.7,0);
+	\draw (0.7,0) to [R, l_=$\underline{Z}_1$] (0.7,-1);
+	\draw (1.8,0) to [R, l=$\underline{Z}_3$] (1.8,-1);
+	\draw (0.7,0) to [R, l_=$\underline{Z}_2$] (1.8,0);
+	\draw (1.8,0) to [short, -*] (2.5,0);
+	\draw (0,-1) to [short, *-*] (2.5,-1);
+	\draw (0.5,0.2) rectangle (2,-1.1);
+	%\node at (1,0.5) [scale=0.7] {T-Glied};
+\end{circuitikz}

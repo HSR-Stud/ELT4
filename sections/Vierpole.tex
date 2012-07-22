@@ -115,14 +115,16 @@
 	\renewcommand{\arraystretch}{\arraystretchOriginal}
 	
 	\subsection{Spezielle 2-Tore}
-	\renewcommand{\arraystretch}{1.1}
-		\begin{tabular}{| c | c | c | c|}
+	\renewcommand{\arraystretch}{1}
+		\begin{tabular}{|l | c | c | c | c|}
 			\hline
+				&
 				& \textbf{Z} 
 				& \textbf{Y}
 				& \textbf{A}\\
 			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Querimpedanz}}
+				Querimpedanz
+				& \input{./tikzPictures/Vierpole/Querimpedanz}
 				& $ \begin{bmatrix}
 						\underline{Z}_{a} & \underline{Z}_{a} \\
 						\underline{Z}_{a} & \underline{Z}_{a} \\
@@ -133,7 +135,8 @@
 						\frac{1}{\underline{Z}_{a}} & 1 \\
 					\end{bmatrix}$\\
 			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Laengsimpedanz}}
+				Längsimpedanz
+				& \input{./tikzPictures/Vierpole/Laengsimpedanz}
 				& -
 				& $ \begin{bmatrix}
 						\frac{1}{\underline{Z}_{b}} & -\frac{1}{\underline{Z}_{b}} \\
@@ -144,7 +147,8 @@
 						0 & 1 \\
 					\end{bmatrix}$\\
 			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/TGlied}}
+				T-Glied
+				& \input{./tikzPictures/Vierpole/T-Glied}
 				& $ \begin{bmatrix}
 						\underline{Z}_{1}+\underline{Z}_{2} & \underline{Z}_{2} \\
 						\underline{Z}_{2} & \underline{Z}_{2}+\underline{Z}_{3} \\
@@ -159,7 +163,8 @@
 						\frac{1}{\underline{Z}_{2}} & 1+\frac{\underline{Z}_{3}}{\underline{Z}_{2}} \\
 					\end{bmatrix}$\\
 			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/PiGlied}}
+				$\pi$-Glied
+				& \input{./tikzPictures/Vierpole/PI-Glied}
 				& $ \frac{1}{\underline{Z}_{1}+\underline{Z}_{2}+\underline{Z}_{3}}
 					\begin{bmatrix}
 						\underline{Z}_{1}(\underline{Z}_{2}+\underline{Z}_{3}) & -\underline{Z}_{1}\underline{Z}_{3} \\
@@ -174,15 +179,16 @@
 						\frac{1}{\underline{Z}_{1}}+\frac{1}{\underline{Z}_{3}}+\frac{\underline{Z}_{2}}{\underline{Z}_{1}\underline{Z}_{3}} & 1+\frac{\underline{Z}_{2}}{\underline{Z}_{1}} \\
 					\end{bmatrix}$\\
 			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Vierpol-Uebertrager}}
-				& existiert nicht
+				Idealer Übertrager
+				&\input{./tikzPictures/Vierpole/IdealerUebertrager} & existiert nicht
 				& existiert nicht
 				& $ \begin{bmatrix}
 						n & 0 \\
 						0 & \frac{1}{n} \\
 					\end{bmatrix}$\\
 			\hline
-				\parbox{2.3cm}{\includegraphics[width=2.3cm]{./bilder/Vierpol-Gegeninduktivitaet}}
+				Gegeninduktivität
+				&\input{./tikzPictures/Vierpole/Gegeninduktivitaet}
 				& $ \begin{bmatrix}
 						sL_1 & sM \\
 						sM & sL_2 \\
