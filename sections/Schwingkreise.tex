@@ -3,7 +3,7 @@
 Die Werte $\textcolor{blue}{U_1,U_2,\beta_u}\text{ sowie
 }\textcolor{red}{I_1,I_2,\beta_i}$ müssen aus den Anfangswerten bestimmt
 werden.\\
-\renewcommand{\arraystretch}{2.3}
+\renewcommand{\arraystretch}{2}
 \begin{tabular}{| p{4cm} | p{7cm} | p{7cm} |}
 	\hline
 		& \textbf{Parallelschwingkreis} 
@@ -83,6 +83,18 @@ werden.\\
 	  t))$
 	  & $i(t) = e^{-\frac{\omega_r}{2Q_s}t}(I_1\cos(\omega_0 t)+I_2\sin(\omega_0
 	  t))$\\
+	  &
+	  \multicolumn{2}{|l|}{
+	  $\dot{u}(t)=\left(-\frac{\omega_r}{2Q_s}\right)e^{-\frac{\omega_r}{2Q_s}t}\left(U_1\cos(\omega_0
+	  t)+U_2\sin(\omega_0
+	  t)\right)+e^{-\frac{\omega_r}{2Q_s}t}\left(-U_1\sin(\omega_0 t)\omega_0 +
+	  U_2\cos(\omega_0 t)\omega_0\right)$ }\\
+	  &
+	  \multicolumn{2}{|l|}{
+	  $\dot{i}(t)=\left(-\frac{\omega_r}{2Q_s}\right)e^{-\frac{\omega_r}{2Q_s}t}\left(I_1\cos(\omega_0
+	  t)+I_2\sin(\omega_0
+	  t)\right)+e^{-\frac{\omega_r}{2Q_s}t}\left(-I_1\sin(\omega_0 t)\omega_0 +
+	  I_2\cos(\omega_0 t)\omega_0\right)$ }\\
 % 	 	& $i(t) = \textcolor{red}{I_1} e^{-\frac{\omega_r}{2 Q_S} t} \cos{\omega_0 t} + 
 % 					\textcolor{red}{I_2} e^{-\frac{\omega_r}{2 Q_S} t} \sin{\omega_0 t} $ \\
 		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_P} \pm j \omega_r \sqrt{1 - \frac{1}{4 Q_P^2}}$	
@@ -91,8 +103,8 @@ werden.\\
 		& $\omega_0 = \omega_r \sqrt{1 - \frac{1}{4 Q_S^2}} \qquad \omega_0 \approx\omega_r (Q_S > 10)$\\
 		& $u(t) = \frac{U_0 \omega_r}{\omega_0} e^{- \frac{\omega_r}{2
 					Q} t} \cos{[\omega_0 t + \arctan{\frac{1}{\sqrt{4 Q^2 -1}}}]}$
-		& $I_1 =  \frac{U_0}{L \cdot 2 \cdot j \omega_0} \quad I_2 = -I_1$
-		$ \quad i(t) = \frac{U_0}{\omega_0 L} e^{-\xi  \omega_r  t} \sin{(\omega_0 t)}$
+		& $I_1 =  \frac{U_0}{L \cdot \omega_0} \quad I_2 = 0
+		 \quad i(t) = \frac{U_0}{\omega_0 L} e^{-\xi  \omega_r  t} \sin{(\omega_0 t)}$
 		%%\vspace{0.1cm}
 		\\
 	\hline
