@@ -1,3 +1,3 @@
 # ELT4 - Elektrotechnik 4
 
-Gian Claudio Köppel
+[Gian Claudio Köppel] (https://github.com/gckoeppel)
