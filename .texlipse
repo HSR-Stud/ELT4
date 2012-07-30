@@ -1,14 +1,13 @@
 #TeXlipse project settings
-#Mon Jul 30 13:38:56 CEST 2012
-markTmpDer=true
+#Thu Feb 23 15:27:38 CET 2012
 builderNum=2
 outputDir=
 makeIndSty=
 bibrefDir=
 outputFormat=pdf
 tempDir=tmp
-mainTexFile=ELT4.tex
-outputFile=ELT4.pdf
-langSpell=de
+mainTexFile=elt4.tex
+outputFile=elt4.pdf
+langSpell=
 markDer=true
 srcDir=
