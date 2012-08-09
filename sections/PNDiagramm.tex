@@ -8,8 +8,12 @@
 \end{tabular}\\
 
 \subsection{PN-Digaramm aus $u(t)$}
-Beispiel:
-$u(t)=20Ve^{\frac{-t}{50ms}}-15V\cos(1000s^{-1}t+\varphi_{11})+12Ve^{4s^{-1}t}\sin(500s^{-1}t+\varphi_{12})$\\
+
+\input{tikzPictures/PNDiagramm/Polstellen.tex}
+
+Beispiel: \newline
+$u(t)=20Ve^{\frac{-t}{50ms}}-15V\cos(1000s^{-1}t+\varphi_{11})+12Ve^{4s^{-1}t}\sin(500s^{-1}t+\varphi_{12})$
+
 Polstellen bei: \\
 \begin{align}
 	20Ve^{\frac{-t}{50ms}} = 20Ve^{-20s^{-1}t} &\rightarrow \text{Pol bei }
@@ -20,8 +24,14 @@ Polstellen bei: \\
 	j500)s^{-1}\nonumber
 \end{align}
 
-\input{tikz/PNDiagramm/Polstellen.tex}
 
 \subsection{Frequenzgang $F(j\omega)$ aus PN-Diagramm}
-\input{tikz/PNDiagramm/Frequenzgang.tex}
+\input{tikzPictures/PNDiagramm/Frequenzgang.tex}
 $F(j\omega)=K\frac{(j\omega-\sigma_1-j\omega_1)\cdot(j\omega-\sigma_1+j\omega_1)\cdot(j\omega-\sigma_2)}{(j\omega+\sigma_1-j\omega_1)\cdot(j\omega+\sigma_1+j\omega_1)\cdot(j\omega+\sigma_2)}$
+
+\subsection{Amplitudengang aus $F\left(j\omega\right)$}
+\begin{align}
+F(j\omega)&=K\cdot\left|\frac{(j\omega-\sigma_1-j\omega_1)\cdot(j\omega-\sigma_1+j\omega_1)\cdot(j\omega-\sigma_2)}{(j\omega+\sigma_1-j\omega_1)\cdot(j\omega+\sigma_1+j\omega_1)\cdot(j\omega+\sigma_2)}\right| 
+&= K \cdot \frac{\left|-\sigma_1+j\left(\omega-\omega_1\right)\right|}{\left|\sigma_1+j\left(\omega-\omega_1\right)\right|} \cdot \frac{\left|-\sigma_1+j\left(\omega+\omega_1\right)\right|}{\left|\sigma_1+j\left(\omega+\omega_1\right)\right|} \cdot \frac{\left|-\sigma_2+j\omega\right|}{\left|\sigma_2+j\omega\right|} \nonumber
+\end{align}
+
