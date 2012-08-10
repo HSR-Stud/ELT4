@@ -90,13 +90,16 @@
                    	\qquad \text{\tiny hinlaufend}\qquad\text{\tiny rücklaufend}
                 \end{matrix}$\\
 			\hline
-				\textbf{Reflektions-, Transmissionskoeffizienten}
+				\textbf{Transmissionskoeffizienten}
+				& $\underline{\tau} = 1 + \underline{r}$\\
+			\hline
+				\textbf{Reflexionskoeffizienten} &
+				$\underline{r}_{Quelle}=\frac{\underline{Z}_{Quelle}-\underline{Z}_W} {\underline{Z}_{Quelle}+\underline{Z}_W}$ \\
+			\hline
 				&
-				$\underline{\Gamma}_{Last}=\frac{\underline{U}^-}{\underline{U}^+}=\frac{\underline{Z}_{Last}-\underline{Z}_W}
-				{\underline{Z}_{Last}+\underline{Z}_W}$ \quad bzw. \quad
-				$\underline{\Gamma}_{Quelle}=\frac{\underline{Z}_{Quelle}-\underline{Z}_W}
-				{\underline{Z}_{Quelle}+\underline{Z}_W}$
-				\qquad $\underline{\tau} = 1 + \underline{\Gamma}$\\
+				$\underline{r}_{Last}=\frac{\underline{U}^-}{\underline{U}^+}=\frac{\underline{Z}_{Last}-\underline{Z}_W}
+				{\underline{Z}_{Last}+\underline{Z}_W}=\underline{r}_{Quelle}\cdot
+				e^{-2\gamma l}$ \\
 			\hline
 				\textbf{Keine Reflektion bei:}
 				& $\underline{Z}_{Last}=\underline{Z}_W$ \quad bzw.
@@ -104,10 +107,10 @@
 			\hline
 				\textbf{Totalreflexion}
 				& $\begin{matrix}
-					\underline{\Gamma}=-1 \Rightarrow \underline{Z}_{Last}=\underline{Z}_{Quelle}=0 \quad
+					\underline{r}=-1 \Rightarrow \underline{Z}_{Last}=\underline{Z}_{Quelle}=0 \quad
 					\text{ideale U-Quelle (Kurzschluss)}\\
-					\underline{\Gamma}=+1 \Rightarrow \underline{Z}_{Last}=\underline{Z}_{Quelle}=\infty \qquad
-					\text{ideale I-Quelle (Leerlauf)} \end{matrix}$\\
+					\underline{r}=+1 \Rightarrow
+					\underline{Z}_{Last}=\underline{Z}_{Quelle}=\infty \qquad \text{ideale I-Quelle (Leerlauf)} \end{matrix}$\\
 			\hline
 				\textbf{Neper}
 				& $1 dB=\frac{ln(10)}{20}Np$ \qquad $U_2 = U_1 \cdot e^{L_U}$\\
@@ -144,6 +147,13 @@
 			\hline
 				\textbf{Wellenwiderstand}
 				& $Z_W=\sqrt{\frac{L'}{C'}}$\\
+			\hline
+				\textbf{Eingangsimpedanz}
+				& $Z_1=R_0\cdot\frac{Z_{Last}+jR_0tan(\beta l)}{R_0+jZ_{Last}tan(\beta l)}
+				$\\
+			\hline
+				\textbf{Phasendrehung}
+				& $r_1=r_2\cdot e^{-2j\beta l}$\\
 			\hline
 				\textbf{LE Leerlauf} $\underline{I}_2=0 \quad \underline{\Gamma}=1$
 				& $\underline{Z}_1=-j\frac{\underline{Z}_W}{\tan(\beta l)}$\\
@@ -366,7 +376,7 @@
 			Aus dem Verhältnis von Spannungsmaximum zu Spannungsminimum entsteht das Stehwellenverhältnis SWR.
 			
 			$$\text{Stehwellenverhältnis}: \quad SWR=\frac{U_{max}}{U_{min}}=\frac{1+|\Gamma_L|}{1-|\Gamma_L|} \qquad \text{Betrag des Reflexionsfaktor}:|\Gamma_L|=\frac{\text{SWR} -1}{\text{SWR} +1}$$
-
+			$$\text{Anpassfaktor}: \quad m=\frac{1}{SWR}$$
 	\subsection{Mehrfachreflexion}
 % 	\textbf{Lastseitig falsch abgeschlossen}\\
 % 	\includegraphics[height=3.5cm]{../El4/bilder/Leitungen_MFReflx_EnAP_SAP.png} \textbf{text folgt} \\
