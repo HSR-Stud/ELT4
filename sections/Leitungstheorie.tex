@@ -73,7 +73,12 @@
 				\frac{\underline{Z}_a+\underline{Z}_W \cdot \tanh(\gamma
 				l)}{\underline{Z}_W+\underline{Z}_a \cdot \tanh(\gamma l)}
 				= \underline{Z}_W \frac{e^{+j \gamma l} + \underline{\Gamma}_{Last} e^{- j \gamma l}}
-				{e^{+j \gamma l} - \underline{\Gamma}_{Last} e^{- j \gamma l}}$\\
+				{e^{+j \gamma l} - \underline{\Gamma}_{Last} e^{- j \gamma
+				l}}$\\
+			\hline
+			  \textbf{Widerstand $\underline{Z}$ beim Reflexionsfaktor $\underline{r}$}
+			  & $\underline{Z}=\underline{Z}_W \cdot
+			  \frac{1+\underline{r}}{1-\underline{r}}$\\
 			\hline
 				\textbf{Phasengeschwindigkeit, Wellenlänge}
 				& $v_P=\frac{1}{\sqrt{L'C'}}=\frac{\lambda}{T}$ \qquad
@@ -85,21 +90,26 @@
 			\hline
 				\textbf{Wellengleichung}
 				& $\begin{matrix}
-                   	\underline{U}(z)=\underline{U}^+_0 \cdot e^{-\gamma z} + \underline{U}^-_0 \cdot e^{\gamma z}\\
-                   	\underline{I}(z)=\underline{I}^+_0 \cdot e^{-\gamma z} - \underline{U}^-_0 \cdot e^{\gamma z}\\
-                   	\qquad \text{\tiny hinlaufend}\qquad\text{\tiny rücklaufend}
+                   	\underline{U}(z)=\underline{U}^+_0 \cdot e^{-\gamma z} +
+                   	\underline{U}^-_0 \cdot e^{\gamma
+                   	z}=\underline{U}_v+\underline{U}_r\\
+                   	\underline{I}(z)=\underline{I}^+_0 \cdot e^{-\gamma z} -
+                   	\underline{U}^-_0 \cdot e^{\gamma
+                   	z}=\underline{I}_v-\underline{I}_r\\
+                   	\text{\tiny hinlaufend}\qquad\text{\tiny rücklaufend}
                 \end{matrix}$\\
 			\hline
 				\textbf{Transmissionskoeffizienten}
 				& $\underline{\tau} = 1 + \underline{r}$\\
 			\hline
 				\textbf{Reflexionskoeffizienten} &
-				$\underline{r}_{Quelle}=\frac{\underline{Z}_{Quelle}-\underline{Z}_W} {\underline{Z}_{Quelle}+\underline{Z}_W}$ \\
+				$\underline{r}_{Quelle}=\frac{\underline{Z}_{Quelle}-\underline{Z}_W}
+				{\underline{Z}_{Quelle}+\underline{Z}_W}=\underline{r}_{Last}\cdot
+        e^{-2\gamma l}$ \\
 			\hline
 				&
 				$\underline{r}_{Last}=\frac{\underline{U}^-}{\underline{U}^+}=\frac{\underline{Z}_{Last}-\underline{Z}_W}
-				{\underline{Z}_{Last}+\underline{Z}_W}=\underline{r}_{Quelle}\cdot
-				e^{-2\gamma l}$ \\
+				{\underline{Z}_{Last}+\underline{Z}_W}$\\
 			\hline
 				\textbf{Keine Reflektion bei:}
 				& $\underline{Z}_{Last}=\underline{Z}_W$ \quad bzw.
@@ -114,11 +124,19 @@
 			\hline
 				\textbf{Neper}
 				& $1 dB=\frac{ln(10)}{20}Np$ \qquad $U_2 = U_1 \cdot e^{L_U}$\\
+			\hline  
+			  \textbf{Reflexionsdämpfung}
+			  & $a=-\ln|\underline{r}|=-20\cdot \log|\underline{r}|$\\
 			\hline
 				\textbf{Bei Abschluss mit $\underline{Z}_W$} &
 				$\underline{U}_1(z) = \underline{U}_2\cdot e^{\gamma z} \qquad
 				\underline{I}_1(z) =- \underline{I}_2\cdot e^{\gamma z} \qquad \alpha l =
 				ln(\frac{U1}{U2}) \qquad \beta l = arg(\frac{\underline{U}_1}{\underline{U}_2})$\\
+			\hline
+			  \textbf{Leistungen}
+			  &
+			  $P_r=\frac{U^2_r}{R}=\frac{r^2U^2_v}{R}=r^2 P_v$\qquad
+			  $P_{Last}=P_v(1-r^2)$\qquad mit $P_v$ = z.B. Antennenleistung\\
 			\hline
 				\textbf{wichtige Formeln}&
 				$\gamma l=\frac{1}{2}ln(\frac{1+\sqrt{\underline{Z}_K/\underline{Z}_L}}{1-

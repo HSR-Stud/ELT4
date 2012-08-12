@@ -3,7 +3,7 @@
 *.out
 *.aux
 *.pdf
-*.synctex
+*.synctex*
 tmp/
 
 #ignore thumbnails created by windows

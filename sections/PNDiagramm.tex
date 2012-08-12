@@ -7,11 +7,16 @@
 	instabil & mindestens eine Polstelle in der rechten Halbebene
 \end{tabular}\\
 
-\subsection{PN-Digaramm aus $u(t)$}
+\subsection{PN-Diagramm aus $u(t)$}
 
-\input{tikzPictures/PNDiagramm/Polstellen.tex}
-
-Beispiel: \newline
+\input{tikzPictures/PNDiagramm/Polstellen.tex}\newline
+\textbf{Allgemein:} \newline
+$u(t)=c_1 e^{q_1 \cdot t}+c_2 e^{q_2\cdot t}+\ldots+c_m e^{q_m \cdot t}\quad
+q_i$: Pole\newline 
+Bei konjugiert-komplexen Paren: $c_{11}e^{(\sigma_1+j\omega_1
+t)}+c_{12}e^{(\sigma_1-j\omega_1 t)}=Ae^{\sigma_1 t}\cos{(\omega_1
+t+\varphi)}$\\
+\textbf{Beispiel:} \newline
 $u(t)=20Ve^{\frac{-t}{50ms}}-15V\cos(1000s^{-1}t+\varphi_{11})+12Ve^{4s^{-1}t}\sin(500s^{-1}t+\varphi_{12})$
 
 Polstellen bei: \\
@@ -26,8 +31,13 @@ Polstellen bei: \\
 
 
 \subsection{Frequenzgang $F(j\omega)$ aus PN-Diagramm}
-\input{tikzPictures/PNDiagramm/Frequenzgang.tex}
-$F(j\omega)=K\frac{(j\omega-\sigma_1-j\omega_1)\cdot(j\omega-\sigma_1+j\omega_1)\cdot(j\omega-\sigma_2)}{(j\omega+\sigma_1-j\omega_1)\cdot(j\omega+\sigma_1+j\omega_1)\cdot(j\omega+\sigma_2)}$
+\begin{tabular}{cp{12cm}}
+\parbox[c][5cm]{5.3cm}{\input{tikzPictures/PNDiagramm/Frequenzgang.tex}}
+& $z =\text{Nullstelle}\newline
+p=\text{Polstelle}\newline
+F(j\omega)=K\frac{(s-z_1)(s-z_2)\ldots(s-z_n)}{(s-p_1)(s-p_2)\ldots
+(s-p_m)}=K\frac{(j\omega-\sigma_1-j\omega_1)\cdot(j\omega-\sigma_1+j\omega_1)\cdot(j\omega-\sigma_2)}{(j\omega+\sigma_1-j\omega_1)\cdot(j\omega+\sigma_1+j\omega_1)\cdot(j\omega+\sigma_2)}$
+\end{tabular}
 
 \subsection{Amplitudengang aus $F\left(j\omega\right)$}
 \begin{align}
