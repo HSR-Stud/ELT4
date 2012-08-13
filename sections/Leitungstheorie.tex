@@ -81,7 +81,7 @@
 			  \frac{1+\underline{r}}{1-\underline{r}}$\\
 			\hline
 				\textbf{Phasengeschwindigkeit, Wellenlänge}
-				& $v_P=\frac{1}{\sqrt{L'C'}}=\frac{\lambda}{T}$ \qquad
+				& $v_P=\frac{1}{\sqrt{L'C'}}=\frac{\lambda}{T} = \frac{\omega}{\beta} = \frac{c}{\sqrt{\epsilon_r \mu_r}} = VK \cdot c$ 
 				\qquad $\lambda=\frac{2\pi}{\beta}=\frac{v_P}{f} \approx
 				\lambda=\frac{\lambda_0}{\sqrt{\varepsilon_r \mu_r}} \quad \beta=[rad]$\\
 			\hline
@@ -125,9 +125,8 @@
 				\textbf{Neper}
 				& $1 dB=\frac{ln(10)}{20}Np$ \qquad $U_2 = U_1 \cdot e^{L_U}$ \qquad $dB = Np \cdot \frac{20}{ln\left(10\right)}$\\
 			\hline  
-			  \textbf{Reflexionsdämpfung}
-			  & $a=-\ln|\underline{r}|\text{ Neper}=-20\cdot
-			  \log|\underline{r}|\text{ dB}$\\
+			  \textbf{Reflexionsdämpfung / Dämpfungsverlust}
+			  & $a=-\ln|\underline{r}|\text{ Neper}=-20\cdot \log|\underline{r}|\text{dB} \quad \quad A = -10\log(\frac{P_L}{P_{max}})$\\
 			\hline
 				\textbf{Bei Abschluss mit $\underline{Z}_W$} &
 				$\underline{U}_1(z) = \underline{U}_2\cdot e^{\gamma z} \qquad
@@ -153,32 +152,39 @@
 	
 	\subsubsection{Verlustfreie Leitungen}
 		\renewcommand{\arraystretch}{1.5}
-		\begin{tabular}{| l | c |}
+		\begin{tabular}{| l | c | c |}
 			\hline
 				\textbf{Fortpflanzungskonstante}
-				& $\gamma=j\beta=j\omega \sqrt{L'C'} \qquad R'=G'=\alpha=0$\\
+				& $\gamma=j\beta=j\omega \sqrt{L'C'} \qquad R'=G'=\alpha=0$
+				&\\
 			\hline
 				\textbf{Dämpfungsmass}
-				& $\alpha=0$\\
+				& $\alpha=0$
+				&\\
 			\hline
 				\textbf{Phasenmass}
-				& $\beta=\frac{2\pi}{\lambda}=\omega\sqrt{L'C'}$\\
+				& $\beta=\frac{2\pi}{\lambda}=\omega\sqrt{L'C'}$
+				& $[\beta] = \frac{rad}{m}$\\
 			\hline
 				\textbf{Wellenwiderstand}
-				& $Z_W=\sqrt{\frac{L'}{C'}}$\\
+				& $Z_W=\sqrt{\frac{L'}{C'}}$
+				& $[Z_W] = \Omega$\\
 			\hline
 				\textbf{Eingangsimpedanz}
-				& $Z_1=R_0\cdot\frac{Z_{Last}+jR_0tan(\beta l)}{R_0+jZ_{Last}tan(\beta l)}
-				$\\
+				& $Z_1=R_0\cdot\frac{Z_{Last}+jR_0tan(\beta l)}{R_0+jZ_{Last}tan(\beta l)}$
+				&\\
 			\hline
 				\textbf{Phasendrehung}
-				& $r_1=r_2\cdot e^{-2j\beta l}$\\
+				& $r_1=r_2\cdot e^{-2j\beta l}$
+				&\\
 			\hline
 				\textbf{LE Leerlauf} $\underline{I}_2=0 \quad \underline{\Gamma}=1$
-				& $\underline{Z}_1=-j\frac{\underline{Z}_W}{\tan(\beta l)}$\\
+				& $\underline{Z}_1=-j\frac{\underline{Z}_W}{\tan(\beta l)}$
+				&\\
 			\hline
 				\textbf{LE Kurzschluss} $\underline{U}_2=0 \quad \underline{\Gamma}=-1$
-				& $\underline{Z}_1=j \underline{Z}_W \tan(\beta l)$\\
+				& $\underline{Z}_1=j \underline{Z}_W \tan(\beta l)$
+				&\\
 			\hline
 				$\begin{matrix}
 					\textbf{LE mit }\underline{Z}_{Last} \textbf{ abgeschlossen}\\
@@ -188,7 +194,8 @@
                   	\frac{\underline{U}_1}{\underline{I}_2}=\cosh(j\beta
                   	l)\underline{Z}_{Last}+\underline{Z}_W \sinh(j\beta l)\\
                   	\frac{\underline{I}_1}{\underline{I}_2}=\frac{1}{\underline{Z}_W} \sinh(j\beta
-                  	l)\underline{Z}_{Last}+ \cosh(j\beta l) \end{matrix}$\\
+                  	l)\underline{Z}_{Last}+ \cosh(j\beta l) \end{matrix}$
+                &\\
 			\hline
 		\end{tabular}
 	\renewcommand{\arraystretch}{1}
