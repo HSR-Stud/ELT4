@@ -1,117 +1,83 @@
 \section{Schwingkreise}
-\subsection{Freie Schwingung}
-Die Werte $\textcolor{blue}{U_1,U_2}\text{ sowie
-}\textcolor{red}{I_1,I_2}$ müssen aus den Anfangswerten bestimmt
-werden.\\
-\renewcommand{\arraystretch}{2}
-\begin{tabular}{| p{4cm} | p{7cm} | p{7cm} |}
-	\hline
-		& \textbf{Parallelschwingkreis} 
-		& \textbf{Serienschwingkreis} \\
-	\hline
-	& & \\
-	& \input{tikzPictures/ParallelSKbeschriftet}
-	& \input{tikzPictures/SerieSK}\\
-	\hline	
-	DGL &
-  $\ddot{u} + \dfrac{1}{RC} \dot{u} + \dfrac{1}{LC} u = 0$
-  & $\ddot{i} + \dfrac{R}{L} \dot{i} + \dfrac{1}{LC} i = 0$\\
-  & $\ddot{u} + \dfrac{\omega_r}{Q_P} \dot{u} + \omega_r^2 u = 0$
-  & $\ddot{i} + \dfrac{\omega_r}{Q_S} \dot{i} + \omega_r^2 i = 0$\\
-	\hline
-	Resonanzfrequenz & \multicolumn{2}{|c|}{$\omega_r =
-	\frac{1}{\sqrt{LC}}$} \\
-	\hline
-	Eigenfrequenz & \multicolumn{2}{|c|}{$\omega_0$} \\
-	\hline
-	Güte & 
-	$Q_P = R\sqrt{\frac{C}{L}} = \frac{R}{\omega_r L}=R\omega_rC$ &
-	$Q_S = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{\omega_r
-	L}{R}=\frac{1}{R\omega_rC}$\\
-	\hline
-	Dämpfungsfaktor & \multicolumn{2}{|c|}{$\xi=\frac{1}{2Q}$} \\
-	\hline
-	
-	Standardstartbedingungen &
-	\begin{minipage}{7cm}
-    	\vspace{0.1cm}
-    	$u(t=0)=U_0$\quad
-    	$\dot{u}(t=0)=-\dfrac{U_o}{RC}$ \\
-    \end{minipage} &
-	\begin{minipage}{7cm}
-     	\vspace{0.1cm}
-    	$i(t=0)=0$\quad
-    	$\dot{i}(t=0)=\dfrac{U_o}{L}$\\   
-    \end{minipage}\\
-	\hline
-	Aperiodisch, $ Q < \frac{1}{2}$
-		& $u(t) = \textcolor{blue}{U_1} e^{\alpha_1 t} + \textcolor{blue}{U_2} e^{\alpha_2 t}$ 
-		& $i(t) = \textcolor{red}{I_1} e^{\alpha_1 t} + \textcolor{red}{I_2} e^{\alpha_2 t}$ \\
-		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_P} \pm \omega_r \sqrt{\frac{1}{4 Q_P^2} - 1}$	
-		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_S} \pm \omega_r \sqrt{\frac{1}{4Q_S^2} - 1}$\\
-		& $U_1 = U_0 \frac{\frac{\omega_r}{Q} +
-		\alpha_2}{\alpha_2 - \alpha_1} \quad$ $U_2 = U_0 \frac{\frac{\omega_r}{Q} +
-		\alpha_1}{\alpha_1 - \alpha_2}$
-		& $I_1 = \frac{U_0}{(\alpha_1 - \alpha_2)L} \quad I_2
-		= -I_1$
-		\vspace{0.1cm}
-		\\
-	\hline 	
-	Kritisch, $ Q = \frac{1}{2}$
-		& $u(t) = (\textcolor{blue}{U_1} + \textcolor{blue}{U_2} t) 
-		e^{\alpha t} = (\textcolor{blue}{U_1} + \textcolor{blue}{U_2} t) 
-		e^{- \omega_r t}$ 
-		& $i(t) = (\textcolor{red}{I_1} + \textcolor{red}{I_2} t) 
-		e^{\alpha t} = (\textcolor{red}{I_1} + \textcolor{red}{I_2} t) 
-		e^{- \omega_r t}$ \\
-% 		& $i(t) = \textcolor{red}{I_1} e^{- \omega_r t} +
-% 		\textcolor{red}{\beta_i} t e^{- \omega_r t}$ \\ 
-		& $\alpha_{1,2} = - \dfrac{\omega_r}{2 Q_P} = - \omega_r$ & 
-		$\alpha_{1,2} = - \dfrac{\omega_r}{2 Q_S} = - \omega_r$\\
-		& $U_1 = U_0 \quad \beta = -U_0 \left(
-		\frac{\omega_r}{Q}+\alpha \right)$ & 
-		$I_1 = 0 \quad \beta = \dfrac{U_0}{L}$
-		\vspace{0.1cm}
-		\\
-	\hline 	
-	Periodisch, $ Q > \frac{1}{2}$
-		& $u(t) = \textcolor{blue}{U_1} e^{\alpha_1 t} + 
-					\textcolor{blue}{U_2} e^{\alpha_2 t} $
-		& $i(t) = \textcolor{red}{I_1} e^{\alpha_1 t} + 
-					\textcolor{red}{I_2} e^{\alpha_2 t} $ \\
-	  & $u(t) = e^{-\frac{\omega_r}{2Q_p}t}(U_1\cos(\omega_0 t)+U_2\sin(\omega_0
-	  t))$
-	  & $i(t) = e^{-\frac{\omega_r}{2Q_s}t}(I_1\cos(\omega_0 t)+I_2\sin(\omega_0
-	  t))$\\
-	  &
-	  \multicolumn{2}{|l|}{
-	  $\dot{u}(t)=\left(-\frac{\omega_r}{2Q_p}\right)e^{-\frac{\omega_r}{2Q_p}t}\left(U_1\cos(\omega_0
-	  t)+U_2\sin(\omega_0
-	  t)\right)+e^{-\frac{\omega_r}{2Q_p}t}\left(-U_1\sin(\omega_0 t)\omega_0 +
-	  U_2\cos(\omega_0 t)\omega_0\right)$ }\\
-	  &
-	  \multicolumn{2}{|l|}{
-	  $\dot{i}(t)=\left(-\frac{\omega_r}{2Q_s}\right)e^{-\frac{\omega_r}{2Q_s}t}\left(I_1\cos(\omega_0
-	  t)+I_2\sin(\omega_0
-	  t)\right)+e^{-\frac{\omega_r}{2Q_s}t}\left(-I_1\sin(\omega_0 t)\omega_0 +
-	  I_2\cos(\omega_0 t)\omega_0\right)$ }\\
-% 	 	& $i(t) = \textcolor{red}{I_1} e^{-\frac{\omega_r}{2 Q_S} t} \cos{\omega_0 t} + 
-% 					\textcolor{red}{I_2} e^{-\frac{\omega_r}{2 Q_S} t} \sin{\omega_0 t} $ \\
-		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_P} \pm j \omega_r \sqrt{1 - \frac{1}{4 Q_P^2}}$	
-		& $\alpha_{1,2} = - \frac{\omega_r}{2 Q_S} \pm j \omega_r \sqrt{1 - \frac{1}{4 Q_S^2}}$	\\
-		& $\omega_0 = \omega_r \sqrt{1 - \frac{1}{4 Q_P^2}} \qquad \omega_0 \approx \omega_r (Q_P > 10)$ 
-		& $\omega_0 = \omega_r \sqrt{1 - \frac{1}{4 Q_S^2}} \qquad \omega_0 \approx\omega_r (Q_S > 10)$\\
-		& $u(t) = \frac{U_0 \omega_r}{\omega_0} e^{- \frac{\omega_r}{2
-					Q} t} \cos{[\omega_0 t + \arctan{\frac{1}{\sqrt{4 Q^2 -1}}}]}$
-		& $I_1 =  \frac{U_0}{L \cdot \omega_0} \quad I_2 = 0
-		 \quad i(t) = \frac{U_0}{\omega_0 L} e^{-\xi  \omega_r  t} \sin{(\omega_0 t)}$
-		%%\vspace{0.1cm}
-		\\
-	\hline
-	\end{tabular}
-	
-\renewcommand{\arraystretch}{\arraystretchOriginal}
+    \subsection{Freie Schwingung}
+        Die Werte $\textcolor{blue}{U_1,U_2}\text{ sowie }\textcolor{red}{I_1,I_2}$ müssen aus den Anfangswerten bestimmt
+        werden.\\
+        \renewcommand{\arraystretch}{2}
+        \begin{tabular}{| p{4cm} | p{7cm} | p{7cm} |}
+            \hline
+            & \textbf{Parallelschwingkreis} & \textbf{Serienschwingkreis} \\
+            \hline
+            & & \\
+            & \input{tikzPictures/ParallelSKbeschriftet} & \input{tikzPictures/SerieSK} \\
+            \hline    
+            
+            DGL &
+            $\ddot{u} + \frac{1}{RC} \dot{u} + \frac{1}{LC} u = \ddot{u} + \frac{\omega_r}{Q} \dot{u} + \omega_r^2 u = 0$ &
+            $\ddot{i} + \frac{R}{L}  \dot{i} + \frac{1}{LC} i = \ddot{i} + \frac{\omega_r}{Q} \dot{i} + \omega_r^2 i = 0$ \\
+            \hline
+            
+            Resonanzfrequenz &
+            \multicolumn{2}{c|}{$\omega_r = \frac{1}{\sqrt{LC}}$} \\
+            \hline
+            
+%           Eigenfrequenz &
+%           \multicolumn{2}{|c|}{$\omega_0$} \\
+%            \hline
 
+            Güte & 
+            $Q = R\sqrt{\frac{C}{L}} = \frac{R}{\omega_r L}=R\omega_rC$ &
+            $Q = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{\omega_r L}{R}=\frac{1}{R\omega_rC}$ \\
+            \hline
+            
+            Dämpfungsfaktor &
+            \multicolumn{2}{c|}{$\xi=\frac{1}{2Q}$} \\
+            \hline
+            
+            Standardstartbedingungen &
+            $u(t=0)=U_0 \qquad \dot{u}(t=0)=-\frac{U_o}{RC}$ &
+            $i(t=0)=0 \qquad \dot{i}(t=0)=\frac{U_o}{L}$ \\
+            \hline
+            
+            Aperiodisch, $ Q < \frac{1}{2}$ &
+            $u(t) = \textcolor{blue}{U_1} e^{\alpha_1 t} + \textcolor{blue}{U_2} e^{\alpha_2 t}$ &
+            $i(t) = \textcolor{red}{I_1}  e^{\alpha_1 t} + \textcolor{red}{I_2} e^{\alpha_2 t}$ \\
+            &
+            $\alpha_{1,2} = - \frac{\omega_r}{2 Q} \pm \omega_r \sqrt{\frac{1}{4 Q^2} - 1}$ &
+            $\alpha_{1,2} = - \frac{\omega_r}{2 Q} \pm \omega_r \sqrt{\frac{1}{4 Q^2} - 1}$ \\
+            &
+            $U_1 = U_0 \frac{\frac{\omega_r}{Q} + \alpha_2}{\alpha_2 - \alpha_1} \quad$ $U_2 = U_0 \frac{\frac{\omega_r}{Q} + \alpha_1}{\alpha_1 - \alpha_2}$ &
+            $I_1 = \frac{U_0}{(\alpha_1 - \alpha_2)L} \quad I_2 = -I_1$ \\
+            \hline
+            
+            Kritisch, $ Q = \frac{1}{2}$ &
+            $u(t) = (\textcolor{blue}{U_1} + \textcolor{blue}{U_2} t) e^{\alpha t} = (\textcolor{blue}{U_1} + \textcolor{blue}{U_2} t) e^{- \omega_r t}$ &
+            $i(t) = (\textcolor{red}{I_1}  + \textcolor{red}{I_2} t)  e^{\alpha t} = (\textcolor{red}{I_1} + \textcolor{red}{I_2} t)   e^{- \omega_r t}$ \\ 
+            &
+            $\alpha_{1,2} = - \omega_r$ & 
+            $\alpha_{1,2} = - \omega_r$ \\
+            &
+            $U_1 = U_0 \quad \beta = -U_0 \left(\frac{\omega_r}{Q}+\alpha \right)$ & 
+            $I_1 = 0 \quad \beta = \frac{U_0}{L}$ \\
+            \hline
+              
+            Periodisch, $ Q > \frac{1}{2}$ &
+            $u(t) = \textcolor{blue}{U_1} e^{\alpha_1 t} + \textcolor{blue}{U_2} e^{\alpha_2 t} $ &
+            $i(t) = \textcolor{red}{I_1}  e^{\alpha_1 t} + \textcolor{red}{I_2}  e^{\alpha_2 t} $ \\
+            &
+            $\alpha_{1,2} = - \frac{\omega_r}{2 Q} \pm j \omega_r \sqrt{1 - \frac{1}{4 Q^2}}$ &
+            $\alpha_{1,2} = - \frac{\omega_r}{2 Q} \pm j \omega_r \sqrt{1 - \frac{1}{4 Q^2}}$ \\
+            &
+            $U_1 = U_0\frac{\frac{\omega_r}{Q} + \alpha_2}{\alpha_2 - \alpha_1} \qquad U_2 = U_0\frac{\frac{\omega_r}{Q} + \alpha_1}{\alpha_1 - \alpha_2}$ &
+            $I_1 =  \frac{U_0}{L \cdot \omega_0} \quad I_2 = 0$ \\
+            &
+            $\omega_0 = \omega_r \sqrt{1 - \frac{1}{4 Q^2}} \qquad \omega_0 \approx \omega_r (Q > 10)$ &
+            $\omega_0 = \omega_r \sqrt{1 - \frac{1}{4 Q^2}} \qquad \omega_0 \approx \omega_r (Q > 10)$ \\
+            &
+            $u(t) = \frac{U_0 \omega_r}{\omega_0} e^{- \frac{\omega_r}{2Q} t} \cos{[\omega_0 t + \arctan{\frac{1}{\sqrt{4 Q^2 -1}}}]}$ &
+            $i(t) = \frac{U_0}{\omega_0 L} e^{-\xi  \omega_r  t} \sin{(\omega_0 t)}$ \\
+            \hline
+        \end{tabular}
+        \renewcommand{\arraystretch}{\arraystretchOriginal}
 
 \subsection{Erzwungene Schwingung}	
 
