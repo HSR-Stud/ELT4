@@ -101,77 +101,128 @@
 \renewcommand{\arraystretch}{\arraystretchOriginal}
 
 
-\subsection{Erzwungene Schwingung}	
+\subsection{Erzwungene Schwingung}
 
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|p{2.4cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-	\hline
-		Maximalwerte &
-		\multicolumn{3}{|l|}{$I_{Lmax}=I_{Cmax}=\dfrac{I\cdot
-   		Q_P}{\sqrt{1-\frac{1}{4Q_P}}}$} &
-   	\multicolumn{3}{|l|}{Gilt auch für $U_{Lmax}=U_{Cmax}$ bei
-   		dem Serieschwing- } \\
-    & \multicolumn{3}{|l|}{$\omega_{I_{Lmax}} =
-   		\omega_r\sqrt{1-\frac{1}{2Q_P^2}}\qquad \omega_{I_{Cmax}} =
-   		\dfrac{\omega_r}{\sqrt{1-\frac{1}{2Q_P^2}}}$} &
-   		\multicolumn{3}{|l|}{kreis, jedoch muss $Q_P$ mit $Q_s$ ersetzt werden.}\\
-   \hline
-   	Bandbreite, Verstimmung 
-   	&
-		\multicolumn{3}{|l|}{
-			\begin{minipage}[c]{6cm}
-			\input{tikzPictures/BandbreiteVerstimmung}
-			\end{minipage}} &
-		\multicolumn{3}{|l|}{
-			\begin{minipage}[c]{6cm}
-  			$b_w = \omega_2 - \omega_1 = \dfrac{\omega_r}{Q}$\\
-  			$B = \dfrac{f_r}{Q}=\dfrac{b_w}{2\pi}$\\\\
-				$\eta = \dfrac{\omega}{\omega_r} - \dfrac{\omega_r}{\omega} \qquad
-				\dfrac{Z}{R} = \dfrac{U}{U_{max}} = \dfrac{1}{\sqrt{1 + (\eta Q)^2}}$
-			\end{minipage}}\\
-	\hline
-		& \multicolumn{2}{|l|}{$\omega = \omega_1$}
-		& \multicolumn{2}{|l|}{$\omega = \omega_r$}
-		& \multicolumn{2}{|l|}{$\omega = \omega_2$} \\
-	\hline
-		Zeigerdiagramme &
-		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammL}} &
-		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammM}} &
-		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammR}} \\
-	\hline
-\end{tabular}
 
-\renewcommand{\arraystretch}{\arraystretchOriginal}
+\renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{| p{4cm} | p{7.0cm} | p{7.0cm} |}
+  	\hline
+  	& \textbf{Parallelschwingkreis} 
+  	& \textbf{Serienschwingkreis} \\
+  	\hline
+  	& $\underline{Z} = \dfrac{R}{1+j(\omega C-\frac{1}{\omega L})\cdot R}$
+  	& $\underline{Y}=\dfrac{G}{1+j(\omega L - \frac{1}{\omega C}\cdot G)}$\\
+	\hline
+  Bandbreite
+	& $B=\dfrac{f_r}{Q_p}$ & $B=\dfrac{f_r}{Q_s}$ \\
+  $B = f_2 - f_1 = \frac{1}{2\pi}(\omega_2-\omega_1)$
+  	& \multicolumn{2}{c|}{$\omega_1 \cdot \omega_2 = {\omega_r}^2$} \\
+  	\hline
+  Verstimmung
+  	& \multicolumn{2}{c|}{$v = \frac{\omega}{\omega_r}-\frac{\omega_r}{\omega} = \frac{f}{f_r}-\frac{f_r}{f} \left( \approx 2\cdot\frac{\Delta \omega}{\omega_r} = 2\cdot\frac{\Delta f}{f_r} \text{ für } |\Delta \omega| << \omega_r, \Delta \omega = \omega - \omega_r \right) $}\\
+  	\hline
+  Normierte Frequenz 
+  	& $ \Omega = v\cdot Q_P $
+  	& $ \Omega = v\cdot Q_S $ \\
+  	\hline
+  Normierter Frequenzgang
+  	& $ \frac{\underline{Z}}{R} = \frac{1}{1+j\Omega}$
+  	& $ \frac{\underline{Y}}{G} = \frac{1}{1+j\Omega}$ \\
+  	\hline
+  An 3dB-Grenzen gilt:
+  	& \multicolumn{2}{c|}{$\omega_{1,2} = \omega_r\left( \sqrt{\frac{1}{4\cdot Q^2}+1}\mp\frac{1}{2\cdot Q}\right)$, auch Bandgrenzen genannt }\\
+  \centering{ bei $\omega = \omega_1 => \Omega = -1$}
+  	& $\frac{Z}{R} = \frac{1}{\sqrt{2}} \widehat{=} -3dB$ ; $\varphi = \pm 45^\circ$
+  	& $\frac{Y}{G} = \frac{1}{\sqrt{2}} \widehat{=} -3dB$\\
+  \centering{ bei $\omega = \omega_2 => \Omega = +1$}
+  	&\multicolumn{2}{c|}{$ P = \frac{1}{2}P_{max} \widehat{=} -3dB$ }\\
+  	\hline
+  Bei Resonanz gilt:
+  	& $Z = Z_{max} = R$ \qquad\qquad $U = U_{max} = R\cdot I$ 
+  	& $Y = Y_{max} = G$ \qquad\qquad $I = I_{max} = G \cdot U$ \\
+  \centering{$\omega = \omega_r$ ; $v = 0$ ; $\Omega = 	0$} 	
+  	& $P = P_{max} = R \cdot I^2$ \qquad $I_L = I_C = I \cdot Q_P$
+  	& $P = P_{max} = G \cdot U^2$ \qquad $U_C = U_L = U \cdot Q_S$\\
+  \centering{Im\{\underline{Z}\} = Im\{\underline{Y}\}= 0}
+  	& Blindleistungen $Q_L = -Q_C = Q_P \cdot P_{max}$
+  	& $Q_L = -Q_C = Q_S \cdot P_{max}$ \\
+  	\hline
+  Spannungen und Ströme 
+    & Quellenstrom $\underline{I}$ konstant
+    & Quellenspannung $\underline{U}$ konstant \\
+   	& $\frac{\underline{Z}}{Z_{max}} = \frac{\underline{Z}}{R}$ und $ \frac{\underline{U}}{U_{max}} = \frac{\underline{Z}}{R}$
+   	& $\frac{\underline{Y}}{Y_{max}} = \frac{\underline{Y}}{G}$ und $ \frac{\underline{I}}{I_{max}} = \frac{\underline{Y}}{G}$\\
+   \hfill Durch R: 
+   	& $\frac{\underline{I}_R}{\underline{I}}  = \frac{\underline{Z}}{R}$ 
+   	& $\frac{\underline{U}_R}{\underline{U}}  = \frac{\underline{Y}}{G}$ \\
+   \hfill Durch L:
+    & $ \frac{\underline{I}_L}{\underline{I}} = \frac{\underline{Z}}{j\omega L}$  ($\underline{I}_L$ um $-90^\circ$ zu $\underline{Z}, \underline{U}, \underline{I}_R$)
+    & $ \frac{\underline{U}_L}{\underline{U}} = j \omega L \cdot \underline{Y}$ ($\underline{U}_L$ um $+90^\circ$ zu $\underline{Y}, \underline{I}, \underline{U}_R$)\\
+   \hfill Durch C:
+    & $ \frac{\underline{I}_C}{\underline{I}} = j \omega C \cdot \underline{Z}$ ($\underline{I}_C$ um $+90^\circ$ zu $\underline{Z}, \underline{U}, \underline{I}_R$) 
+    & $ \frac{\underline{U}_C}{\underline{U}} = \frac{\underline{Y}}{j\omega C}$ ($\underline{U}_C$ um $-90^\circ$ zu $\underline{Y}, \underline{I}, \underline{U}_R$)\\
+    & \parbox[l]{3cm}{
+    	\scalebox{0.8}{\input{tikzPictures/BandbreiteVerstimmung}}}
+    & \begin{minipage}[c]{5cm}
+    	Bei $\omega = \omega_1$:\\
+   		\input{tikzPictures/ZeigerdiagrammL}
+   	  \end{minipage}\\
+   	Maximale Werte 
+   	& $I_{Lmax}=I_{Cmax}=\dfrac{I\cdot 	Q_P}{\sqrt{1-\frac{1}{4Q_P}}}$
+   	& $I_{L_P} \Leftrightarrow U_{C_S} \qquad I_{C_P} \Leftrightarrow U_{L_S}$ \\
+   	& $I_{Lmax}$ bei $\omega_L = \omega_r\cdot\sqrt{1-\frac{1}{2{Q_P}^2}} < \omega_r$
+   	& $Q_P \Leftrightarrow Q_S$\\
+   	& $I_{Cmax}$ bei $\omega_C = \frac{\omega_r}{\sqrt{1-\frac{1}{2{Q_P}^2}}} > \omega_r$\\
 
-\subsection{Verlustbehafteter Schwingkreis}
-Resonanzfrequenz $\omega_r$ tritt dort auf, wo 
-$\operatorname{Im} \{ \underline{Y}(\omega) \} =
-\operatorname{Im}\{\underline{Z}(\omega) \} = 0$.\\
-Damit Jürg das ganze auch noch versteht: Die Resonanzfrequenz einer beliebigen
-Schaltung ist dort, wo Z rein reell ist!
+   	\hline
+  \end{tabular}	
 
 \subsection{Resonanzkreis mit realen Elementen}
-Umrechnungen Parallel- $\Longleftrightarrow$ Serieschaltungen von L \& R oder C
-\& R für \textit{einen} Frequenzpunkt!\\
+	Umrechnungen Parallel- $\Longleftrightarrow$ Serieschaltungen von L \& R oder C
+	\& R für \textbf{\textit{einen}} Frequenzpunkt!\\
+	
+	% Siehe http://www.causa-dura.ch/Scripts/aet\_skript.pdf, seite 121 
+	\renewcommand{\arraystretch}{1.1}
+	\begin{tabular}{| p{2cm} | p{8cm} | p{8cm} |}
+		\hline
+			& \textbf{Parallel $\Rightarrow$ Seriell}  
+			& \textbf{Seriell $\Rightarrow$ Parallel} \\
+		\hline
+			L \& R
+			& $ R_S = \dfrac{R_P (\omega L_P)^2}{R_P^2 + (\omega L_P)^2} \qquad 
+				L_S = \dfrac{R_P^2 L_P}{R_P^2 + (\omega L_P)^2}  $
+			& $ R_P = \dfrac{R_S^2 + (\omega L_S)^2}{R_S} \qquad 
+				L_P = \dfrac{R_S^2 + (\omega L_S)^2}{\omega^2 L_S}   $ \\
+		\hline	
+			C \& R
+			& $ R_S = \dfrac{R_P}{1 + (\omega R_P C_P)^2} \qquad 
+				C_S = \dfrac{1 + (\omega R_P C_P)^2}{(\omega R_P)^2 C_P}$
+			& $ R_P = \dfrac{(\omega C_S R_S)^2 + 1}{(\omega C_S)^2 R_S} \qquad
+				C_P = \dfrac{C_S}{1 + (\omega C_S R_S)^2}$\\
+		\hline
+	\end{tabular}
 
-% Siehe http://www.causa-dura.ch/Scripts/aet\_skript.pdf, seite 121 
-\renewcommand{\arraystretch}{1.1}
-\begin{tabular}{| p{2cm} | p{8cm} | p{8cm} |}
-	\hline
-		& \textbf{Parallel $\Rightarrow$ Seriell}  
-		& \textbf{Seriell $\Rightarrow$ Parallel} \\
-	\hline
-		L \& R
-		& $ R_S = \dfrac{R_P (\omega L_P)^2}{R_P^2 + (\omega L_P)^2} \qquad 
-			L_S = \dfrac{R_P^2 L_P}{R_P^2 + (\omega L_P)^2}  $
-		& $ R_P = \dfrac{R_S^2 + (\omega L_S)^2}{R_S} \qquad 
-			L_P = \dfrac{R_S^2 + (\omega L_S)^2}{\omega^2 L_S}   $ \\
-	\hline	
-		C \& R
-		& $ R_S = \dfrac{R_P}{1 + (\omega R_P C_P)^2} \qquad 
-			C_S = \dfrac{1 + (\omega R_P C_P)^2}{(\omega R_P)^2 C_P}$
-		& $ R_P = \dfrac{(\omega C_S R_S)^2 + 1}{(\omega C_S)^2 R_S} \qquad
-			C_P = \dfrac{C_S}{1 + (\omega C_S R_S)^2}$\\
-	\hline
-\end{tabular}
-\renewcommand{\arraystretch}{1}
+%\begin{tabular}{|p{2.4cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+%	\hline
+%		Maximalwerte &
+%		\multicolumn{3}{|l|}{$I_{Lmax}=I_{Cmax}=\dfrac{I\cdot
+%   		Q_P}{\sqrt{1-\frac{1}{4Q_P}}}$} &
+%   	\multicolumn{3}{|l|}{Gilt auch für $U_{Lmax}=U_{Cmax}$ bei
+%   		dem Serieschwing- } \\
+%    & \multicolumn{3}{|l|}{$\omega_{I_{Lmax}} =
+%   		\omega_r\sqrt{1-\frac{1}{2Q_P^2}}\qquad \omega_{I_{Cmax}} =
+%   		\dfrac{\omega_r}{\sqrt{1-\frac{1}{2Q_P^2}}}$} &
+%   		\multicolumn{3}{|l|}{kreis, jedoch muss $Q_P$ mit $Q_s$ ersetzt werden.}\\
+%	\hline
+%		& \multicolumn{2}{|l|}{$\omega = \omega_1$}
+%		& \multicolumn{2}{|l|}{$\omega = \omega_r$}
+%		& \multicolumn{2}{|l|}{$\omega = \omega_2$} \\
+%	\hline
+%		Zeigerdiagramme &
+%		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammL}} &
+%		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammM}} &
+%		\multicolumn{2}{|l|}{\input{tikzPictures/ZeigerdiagrammR}} \\
+%	\hline
+%\end{tabular}
+
+\renewcommand{\arraystretch}{\arraystretchOriginal}
