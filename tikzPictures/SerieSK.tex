@@ -1,10 +1,13 @@
 \begin{circuitikz}[scale=2, european, american inductors]
+\ctikzset{voltage/european label distance=3}
 \ctikzset{bipoles/length=1.2cm}
-	\draw
-	(0,0)
-		to[L=L, o-](1,0)
+	\draw (0,0)
+		to[L=L](1,0)
 	(1,0) to[R=R](2,0)
-	(2,0) to[C=C, -o](3,0);
+	(2,0) to[C=C](3,0)
+		to[short](3,-0.5)
+		to[short, i>=$i(t)$](0,-0.5)
+		to[short](0,0);
 \end{circuitikz}
 
 
