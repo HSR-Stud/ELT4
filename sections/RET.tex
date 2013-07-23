@@ -19,22 +19,32 @@
 			}
 			& \parbox{5cm}{
 				\textbf{Kapazität} \\
-				$\underline{Z}=\frac{1}{j\omega C}=\frac{-j}{\omega C} \qquad X=\frac{-1}{\omega C}$\\
+				$\underline{Z}=\frac{1}{j\omega C}=-\frac{j}{\omega C} \qquad X=-\frac{1}{\omega C}$\\
 				$B=\omega C$ \\
 				Nullstelle: $\lim\limits_{\omega \rightarrow \infty} X(\omega) = 0$ \\
 				Polstelle: $\lim\limits_{\omega \rightarrow 0} X(\omega) = -\infty$ \\
 			}
 	\end{tabular}
+
+\begin{multicols}{2}
 	
 \subsection{Vorgehen bei Netzwerkanalyse}
 	\begin{enumerate}{\setlength{\itemsep}{0cm}\setlength{\parsep}{0cm} \setlength{\topsep}{0cm}}
       \item Schaltung übersichtlich aufzeichenen und den Startpunkt der Addition bestimmen
       \item Frequenzverlauf der Reaktanz finden durch fortgeschrittene Addition und Inversion
-      \item Inversion: $B(\omega)=\frac{-1}{X(\omega)}$ ; $Polstelle \Longleftrightarrow Nullstelle$
+      \item Inversion: $B(\omega)=-\frac{1}{X(\omega)}$ ; $Polstelle \Longleftrightarrow Nullstelle$
       \item Die so entstandenen Pole und Nullstellen, ausser 0 und $\infty$ sind die Resonanzfrequenzen des RET
     \end{enumerate}
+    
+    
+\subsection{RET Eigenschaften}
+	\begin{itemize}
+		\item \textbf{Zähler/Nenner-Potenz} - Der Zahler hat entweder/oder gerade/ungerade Potenzen, wohin gegen der Nenner ungerade/gerade Potenzen von $j\omega$ besitzt
+		\item Den Polynomen fehlen keine Koeffizienten!
+		\item \textbf{Anzahl Elemente} - Anzahl nicht-negativen und endlichen Polen/Nullstellen entspricht minimale Anzahl Elemente
+	\end{itemize}
 	
-	
+\end{multicols}	
 
 \renewcommand{\arraystretch}{2}
 \begin{sidewaystable}
@@ -115,8 +125,9 @@ Klemmentrennbündel und Klemmenkreis wurden abgekürzt zu TB und Kreis. Die
 Reaktanzdiagramme sind keinenfalls Masstäblich!}
 \label{tab:RETTyp}
 \end{sidewaystable}
-\renewcommand{\arraystretch}{\arraystretchOriginal}
-\newpage		
+\renewcommand{\arraystretch}{\arraystretchOriginal}		
+
+
 		
 \subsection{Minimalreaktanzeintor (MRET)}
 	%RET in MRET wandeln:\\
@@ -124,72 +135,52 @@ Reaktanzdiagramme sind keinenfalls Masstäblich!}
       \item Netzwerk übersichtlich aufzeichnen 
       \item Tor offen; Kreise suchen die nur L oder C enthalten; Ein
       Element des Kreises weglassen, es darf aber kein anderer Zweig stromlos werden. 
-      \item Tor kurzgeschlossen; Trennbündel suchen(Knoten an denen nur
+      \item Tor kurzgeschlossen; Trennbündel suchen(Knoten, oder Element an denen nur
       L oder C liegen); Ein Element kurzschliessen, dabei darf kein anderes Element kurzgeschlossen werden.
       \item Die verbleibenden Elemente im MRET haben nicht mehr die
       gleichen Grössen und müssen neu berechnet werden.
     \end{enumerate}
 	
-	%Anzahl Elemente = Höchste Potenzfunktion $\underline{Z}(p)$
-		
-			
-\subsection{Dualität}
-\textbf{Vorgehen}
-\begin{enumerate}[itemsep=1ex, nosep]
-	\item Netzwerk ohne Kreuzungen aufzeichnen
-	\item In jede Masche (auch in Umfangsmasche) einen dualen Knoten setzen
-	\item Knoten von anstossenden Maschen verbinden. Jeder dieser Maschen hat
-	gemeinsamen Zweig (dualen Zweig).
-	\item In die dualen Zweige die dualen Schaltungselemente einsetzen.
-	\item Dualfaktor $D [\Omega]$ wählen und Werte der dualen Netzwerk-Elemente
-	bestimmen.
-\end{enumerate}
-
-\begin{tabular}{llllllll}
-$R'=D^2G$ & $L'=D^2C$ & $\underline{U}'=D\underline{I}$ & $G'=\frac{R}{D^2}$ &
-$C'=\frac{L}{D^2}$ & $I'=\frac{\underline{U}}{D}$ & Knoten $\leftrightarrow$
-Masche & Stern $\leftrightarrow$ Dreieck \\
-$R \leftrightarrow G $ & $C \leftrightarrow L$ & $u \leftrightarrow i$ &
-$\underline{Z} \leftrightarrow \underline{Y}$ & $\tau' = \tau$ & & Parallel $\leftrightarrow$
-Serie & Stromquelle $\leftrightarrow$ Spannungsquelle\\
-\end{tabular}
+	Anzahl Elemente entspricht höchster Potenzfunktion $\underline{Z}(p)$
 
 \subsection{RET-Synthese}
 \begin{multicols}{2}
 \subsubsection{Mittels Partialbruchzerlegung}
 	\begin{enumerate}
-	  \item $F(p)=\frac{2p^6+22p^4+68p^2+48}{3p^5+21p^3+30p}$
-	  \item $F(p)$ ausdividieren, falls Zählergrad $>$ Nennergrad
+	  \item $\underline{F}(p)=\frac{2p^6+22p^4+68p^2+48}{3p^5+21p^3+30p}$
+	  \item $\underline{F}(p)$ ausdividieren, falls Zählergrad $>$ Nennergrad
 	  \item Nenner des echten Bruches zerlegen und Ansatz bilden
 	  $(\frac{2}{3}p+)
 	  \quad\frac{8p^4+48p^2+48}{3p^5+21p^3+30p}=\frac{A}{3p}+\frac{Bp}{p^2+2}+\frac{Cp}{p^2+5}$
 		\item Erweitern und Koeffizienten bestimmen\newline $A=\frac{24}{5} \qquad
 		B=\frac{8}{9} \qquad C=\frac{8}{45}$
-		\item Koeffizienten einsetzen
-		$F(p)=\frac{2}{3}p+\frac{1}{\frac{15}{24}p}+\frac{1}{\frac{9}{8}p+\frac{1}{\frac{4}{9}p}}+\frac{1}{\frac{45}{8}p+\frac{1}{\frac{8}{255}p}}$
-		\item Schaltung aufzeichnen:	  
+		\item Koeffizienten einsetzen\\
+		$\underline{F}(p)=\frac{2}{3}p+\frac{1}{\frac{15}{24}p}+\frac{1}{\frac{9}{8}p+\frac{1}{\frac{4}{9}p}}+\frac{1}{\frac{45}{8}p+\frac{1}{\frac{8}{255}p}}$
+		\item Schaltung aufzeichnen:\\
+			Impedanzfunktion $\underline{Z}(p)$\\
+			\hspace*{0.5cm}\scalebox{0.6}{\input{tikzPictures/RET/PartialbruchImpedanz}}\\
+			Admittanzfunktion $\underline{Y}(p)$\\
+			\hspace*{0.5cm}\scalebox{0.55}{\input{tikzPictures/RET/PartialbruchAddmitanz}}	  
 	\end{enumerate}
-	Impedanzfunktion $Z(p)$\\
-	\input{tikzPictures/RET/PartialbruchImpedanz}\\
-	Admittanzfunktion $Y(p)$\\
-	\input{tikzPictures/RET/PartialbruchAddmitanz}\\
+	
 \subsubsection{Mittels Kettenbruchzerlegung}
-1. Art: Zählergrad $>$ Nennergrad\\
-2. Art: Polynom nach kleinster Potenz ordnen. Falls Pol bei p=0 nicht
-invertieren, ansonsten invertieren\\
+1. Art: Zählergrad $>$ Nennergrad, sonst invertieren\\
+2. Art: Polynom nach kleinster Potenz ordnen. Falls Pol bei p=0 $\Rightarrow$ nicht
+invertieren, ansonsten invertieren
 \begin{enumerate}
-	\item $F(p)=\frac{2p^6+22p^4+68p^2+48}{3p^5+21p^3+30p}$
-	\item $F(p)$ ausdividieren $=\frac{2}{3}p+\frac{8p^4+48p^2+48}{3p^5+21p^3+30p}$
-	\item Kehrwert des Restes wieder ausdividieren
+	\item $\underline{F}(p)=\frac{2p^6+22p^4+68p^2+48}{3p^5+21p^3+30p}$
+	\item $\underline{F}(p)$ ausdividieren $=\frac{2}{3}p+\frac{8p^4+48p^2+48}{3p^5+21p^3+30p}$
+	\item Kehrwert des Restes nochmals ausdividieren
 	$\frac{2}{3}p+\frac{1}{\frac{3p^5+21p^3+30p}{8p^4+48p^2+48}}=\frac{2}{3}p+\frac{1}{\frac{3}{8}p+\frac{3p^3+12p}{8p^4+48p^2+48}}$
 	\item Schritt zwei wiederholen bis kein Rest mehr vorhanden ist
-	$F(P)=\frac{2}{3}p+\frac{1}{\frac{3}{8}p+\frac{1}{\frac{8}{3}p+\frac{1}{\frac{3}{16}p+\frac{1}{\frac{16}{3}p+\frac{1}{\frac{1}{16}p}}}}}$
-	\item Schaltung aufzeichnen  (bei 2. Art L und C vertauschen):
+	$\underline{F}(P)=\frac{2}{3}p+\frac{1}{\frac{3}{8}p+\frac{1}{\frac{8}{3}p+\frac{1}{\frac{3}{16}p+\frac{1}{\frac{16}{3}p+\frac{1}{\frac{1}{16}p}}}}}$
+	\item Schaltung aufzeichnen  (bei 2. Art L und C vertauschen):\\
+		Impedanzfunktion $\underline{Z}(p)$\\
+		\hspace*{0.5cm}\scalebox{0.6}{\input{tikzPictures/RET/KettenbruchImpedanz}}\\
+		Admittanzfunktion $\underline{Y}(p)$\\
+		\hspace*{0.5cm}\scalebox{0.6}{\input{tikzPictures/RET/KettenbruchAdmittanz}}\\
 \end{enumerate}
-Impedanzfunktion $Z(p)$\\
-\input{tikzPictures/RET/KettenbruchImpedanz}\\
-Admittanzfunktion $Y(p)$\\
-\input{tikzPictures/RET/KettenbruchAdmittanz}\\
+
 \end{multicols}
 
 
