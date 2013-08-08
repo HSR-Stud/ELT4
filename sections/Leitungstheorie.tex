@@ -432,6 +432,62 @@
 		\textbf{Leitung nicht ideal abgeschlossen}\\
 			Es entsteht beim Empfänger eine Überlagerung der absorbierten und der stehenden Welle.
 			Aus dem Verhältnis von Spannungsmaximum zu Spannungsminimum entsteht das Stehwellenverhältnis VSWR.
+			
+\subsubsection{Beispiele zu Leitungsabschlüssen}
+		\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{| p{0.14\linewidth} | p{0.14\linewidth}  | p{0.14\linewidth}  | p{0.14\linewidth}  | p{0.14\linewidth}  | p{0.14\linewidth}  |}
+			\hline
+				\textbf{Fall}
+				& 1
+				& 2 
+				& 3
+				& 4
+				& 5 \\
+			\hline
+				\textbf{LE}
+				& Anpassung
+				& Leerlauf: \newline Spannungs-\newline maximum
+				& Kurzschluss: \newline Spannungs-\newline minimum
+				& $\lambda/8$ Stichleit. KS
+				& $\lambda/8$ Stichleit. LL \\
+			\hline
+				\textbf{SWR}
+				& 1
+				& $\infty$
+				& $\infty$
+				& $\infty$
+				& $\infty$ \\
+			\hline
+				\textbf{$\underline{r}$}
+				& $0$
+				& $1 \angle 0 ^\circ$
+				& $1 \angle 180 ^\circ$
+				& $1 \angle 90 ^\circ$
+				& $1 \angle 90 ^\circ$\\
+			\hline
+				\textbf{z}
+				& $1+j0$
+				& $\infty+j\infty$
+				& $0+j0$
+				& $0+j1$
+				& $0-j1$ \\
+			\hline
+				\textbf{$v_{xm}$}
+				& $-$
+				& $\lambda/4$
+				& $\lambda/2$
+				& $3\lambda/8$
+				& $\lambda/8$ \\
+			\hline
+				\textbf{Grafik}
+				& \includegraphics[height=0.9cm]{./bilder/Fall1.png}
+				& \includegraphics[height=0.9cm]{./bilder/Fall2.png}
+				& \includegraphics[height=0.9cm]{./bilder/Fall3.png}
+				& \includegraphics[height=0.9cm]{./bilder/Fall4.png}
+				& \includegraphics[height=0.9cm]{./bilder/Fall5.png} \\
+			\hline
+		\end{tabular}
+
 %	\subsection{Mehrfachreflexion}
 %% 	\textbf{Lastseitig falsch abgeschlossen}\\
 %% 	\includegraphics[height=3.5cm]{../El4/bilder/Leitungen_MFReflx_EnAP_SAP.png} \textbf{text folgt} \\
